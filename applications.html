@@ -52,10 +52,7 @@
       <div class="signout_btn">50
         <button class="btn"><a href="index.html">Signout</a></button>
         <i class="fa-solid fa-bars" id="bar"></i>
-        <script>
-            localStorage.setItem('isLoggedIn', 'false');
-  
-        </script>
+      
       </div>
     </header>
     <br>
@@ -153,19 +150,6 @@
     </script>
 
     
-
-  <script>
-      // Check session status when the page loads
-      window.onload = function() {
-        // Retrieve session flag from localStorage
-        var isLoggedIn = localStorage.getItem('isLoggedIn');
-    
-        // If the user is not logged in, redirect to the login page
-        if (!isLoggedIn || isLoggedIn !== 'true') {
-          window.location.href = 'index.html';
-        }
-      };
-    </script>
 
     
 
