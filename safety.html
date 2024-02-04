@@ -1,0 +1,86 @@
+<!--
+    <div id="GMapplications">
+
+  </div>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    
+    const firebaseConfig = {
+      apiKey: "AIzaSyAO9zhttsR2jhYQPBpsNiAzBPPMD8ZJtno",
+      authDomain: "fbla-restaurant-db.firebaseapp.com",
+      databaseURL: "https://fbla-restaurant-db-default-rtdb.firebaseio.com",
+      projectId: "fbla-restaurant-db",
+      storageBucket: "fbla-restaurant-db.appspot.com",
+      messagingSenderId: "1032671063739",
+      appId: "1:1032671063739:web:93e3567aade232b2db839e"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    import {getDatabase, ref, get, child} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+
+    const db = getDatabase();
+
+    let GMapplications = document.getElementById('GMapplications');
+    let stdno = ;
+
+    function GetApplications(){
+      const dbref = ref(db);
+
+      get(child(dbref, 'fullName')).then((applications)=>{
+        applications.forEastd =>{
+          AddapplicationAsListItem(std)
+        });
+      })
+    }
+      function AddapplicationAsListItem(std) {
+        let key = std.key;
+        let value = std.val();
+  
+        let fullName = document.createElement('li'); // Fix the variable name here
+        let applicationForm = document.createElement('li');
+        let dob = document.createElement('li');
+        let address = document.createElement('li');
+        let education = document.createElement('li');
+        let state = document.createElement('li');
+        let email = document.createElement('li');
+        let zip = document.createElement('li');
+        let whyworkhere = document.createElement('li');
+        let skillsandcertifications = document.createElement('li');
+        let motivationsatwork = document.createElement('li');
+        let expectedsalary = document.createElement('li');
+        let employmenthistory = document.createElement('li');
+        let coverleter = document.createElement('li');
+        let bestcandidateskills = document.createElement('li');
+  
+        applicationForm.innerHTML = "Application Form: " + value.applicationForm;
+        fullName.innerHTML = "Full Name: " + value.fullName;
+        dob.innerHTML = "Date of Birth: " + value.dob;
+        address.innerHTML = "Address: " + value.address;
+        education.innerHTML = "Education: " + value.education;
+        state.innerHTML = "State: " + value.state;
+        email.innerHTML = "Email: " + value.email;
+        zip.innerHTML = "ZIP: " + value.zip;
+        whyworkhere.innerHTML = "Why Work Here: " + value.whyworkhere;
+        skillsandcertifications.innerHTML = "Skills and Certifications: " + value.skillsandcertifications;
+        motivationsatwork.innerHTML = "Motivations at Work: " + value.motivationsatwork;
+        expectedsalary.innerHTML = "Expected Salary: " + value.expectedsalary;
+        employmenthistory.innerHTML = "Employment History: " + value.employementhistory;
+        coverleter.innerHTML = "Cover Letter: " + value.coverletter;
+        bestcandidateskills.innerHTML = "Best Candidate Skills: " + value.bestcandidateskills;
+        
+        let ul = document.createElement('ul');
+        ul.append(applicationForm, fullName, email, address, state, zip, education, employmenthistory, whyworkhere, bestcandidateskills, skillsandcertifications, motivationsatwork, expectedsalary, coverleter);
+        GMapplications.append(ul);
+        stdno++;
+    }
+  
+
+    window.addEventListener('load', GetApplications);
+
+
+  </script>
+-->
