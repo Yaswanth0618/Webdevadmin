@@ -69,6 +69,7 @@
       var password = document.getElementById('password').value;
 
       if (username === 'CHadmin1289' && password === 'CHadminpass8912') {
+        localStorage.setItem('isLoggedIn', 'true');
         alert('Login successful');
         window.location.href = 'home.html'; // Redirect to main.html
       } else {
