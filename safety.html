@@ -1,86 +1,172 @@
 <!--
-    <div id="GMapplications">
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="x-icon" href="CulHar_Logo-removebg.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Culinary Harbor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-  </div>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-  <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     
-    const firebaseConfig = {
-      apiKey: "AIzaSyAO9zhttsR2jhYQPBpsNiAzBPPMD8ZJtno",
-      authDomain: "fbla-restaurant-db.firebaseapp.com",
-      databaseURL: "https://fbla-restaurant-db-default-rtdb.firebaseio.com",
-      projectId: "fbla-restaurant-db",
-      storageBucket: "fbla-restaurant-db.appspot.com",
-      messagingSenderId: "1032671063739",
-      appId: "1:1032671063739:web:97aade232b2db839e"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-    import {getDatabase, ref, get, child} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+    <link rel="stylesheet" href="main.css" />
 
-    const db = getDatabase();
+    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-    let GMapplications = document.getElementById('GMapplications');
-    let stdno = ;
+   
+    
 
-    function GetApplications(){
-      const dbref = ref(db);
+  </head>
 
-      get(child(dbref, 'fullName')).then((applications)=>{
-        applications.forEastd =>{
-          AddapplicationAsListItem(std)
+  <body>
+    <header>
+      <a href="#" class="logo">
+        <img src="admin logo.png" width="50px" />
+        <div class="log_text">Culinary Harbor</div>
+      </a>
+
+
+      <div class="signout_btn">
+        <button class="btn"><a href="index.html">Signout</a></button>
+        <i class="fa-solid fa-bars" id="bar"></i>
+      </div>
+    </header>
+    <br>
+    
+    <div class="container mt-3">
+      <table class="table">
+        <thead>
+          <th>Applicant Number</th>
+          <th>Full Name</th>
+          <th>Application Form</th>
+        </thead>
+        <tbody id = "tbody1"></tbody>
+      </table>
+    </div>
+
+    <script type="module">
+      var stdNo = 0;
+      var tbody = document.getElementById('tbody1');
+
+      function AddItemToTable(fullName, applicationForm){
+        let trow = document.createElement("tr");
+        let td1 = document.createElement('td');
+        let td2 = document.createElement('td');
+        let td3 = document.createElement('td');
+
+        td1.innerHTML = ++stdNo;
+        td2.innerHTML = fullName;
+        td3.innerHTML = applicationForm;
+
+        trow.appendChild(td1);
+        trow.appendChild(td2);
+        trow.appendChild(td3);
+
+        tbody.appendChild(trow);
+
+      }
+
+      function AddAllItemsToTable(TheApplicant){
+        stdNo = 0;
+        tbody.innerHTML="";
+        TheApplicant.forEach(element => {
+          AddItemToTable(element.fullName, element.applicationForm);
         });
-      })
-    }
-      function AddapplicationAsListItem(std) {
-        let key = std.key;
-        let value = std.val();
-  
-        let fullName = document.createElement('li'); // Fix the variable name here
-        let applicationForm = document.createElement('li');
-        let dob = document.createElement('li');
-        let address = document.createElement('li');
-        let education = document.createElement('li');
-        let state = document.createElement('li');
-        let email = document.createElement('li');
-        let zip = document.createElement('li');
-        let whyworkhere = document.createElement('li');
-        let skillsandcertifications = document.createElement('li');
-        let motivationsatwork = document.createElement('li');
-        let expectedsalary = document.createElement('li');
-        let employmenthistory = document.createElement('li');
-        let coverleter = document.createElement('li');
-        let bestcandidateskills = document.createElement('li');
-  
-        applicationForm.innerHTML = "Application Form: " + value.applicationForm;
-        fullName.innerHTML = "Full Name: " + value.fullName;
-        dob.innerHTML = "Date of Birth: " + value.dob;
-        address.innerHTML = "Address: " + value.address;
-        education.innerHTML = "Education: " + value.education;
-        state.innerHTML = "State: " + value.state;
-        email.innerHTML = "Email: " + value.email;
-        zip.innerHTML = "ZIP: " + value.zip;
-        whyworkhere.innerHTML = "Why Work Here: " + value.whyworkhere;
-        skillsandcertifications.innerHTML = "Skills and Certifications: " + value.skillsandcertifications;
-        motivationsatwork.innerHTML = "Motivations at Work: " + value.motivationsatwork;
-        expectedsalary.innerHTML = "Expected Salary: " + value.expectedsalary;
-        employmenthistory.innerHTML = "Employment History: " + value.employementhistory;
-        coverleter.innerHTML = "Cover Letter: " + value.coverletter;
-        bestcandidateskills.innerHTML = "Best Candidate Skills: " + value.bestcandidateskills;
-        
-        let ul = document.createElement('ul');
-        ul.append(applicationForm, fullName, email, address, state, zip, education, employmenthistory, whyworkhere, bestcandidateskills, skillsandcertifications, motivationsatwork, expectedsalary, coverleter);
-        GMapplications.append(ul);
-        stdno++;
-    }
-  
+      }
 
-    window.addEventListener('load', GetApplications);
+      
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  
+      const firebaseConfig = {
+        apiKey: "AIzaSyAO9zhttsR2jhYQPBpsNiAzBPPMD8ZJtno",
+        authDomain: "fbla-restaurant-db.firebaseapp.com",
+        databaseURL: "https://fbla-restaurant-db-default-rtdb.firebaseio.com",
+        projectId: "fbla-restaurant-db",
+        storageBucket: "fbla-restaurant-db.appspot.com",
+        messagingSenderId: "1032671063739",
+        appId: "1:1032671063739:web:93e3567aade232b2db839e"
+      };
 
 
-  </script>
+      const app = initializeApp(firebaseConfig);
+      import { getDatabase, ref, child, onValue, get} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+      const db = getDatabase();
+
+
+      function GetAllDataOnce(){
+        const dbRef = ref(db);
+
+        get(child(dbRef, "fullName"))
+        .then((snapshot) =>{
+          var applicants = [];
+
+          snapshot.forEach(childSnapshot => {
+            applicants.push(childSnapshot.val());
+          });
+          AddAllItemsToTable(applicants);
+        });
+      }
+
+      function GetAllDataRealtime(){
+        const dbRef = ref(db, "fullName");
+
+        onValue(dbref, (snapshot) => {
+          var applicants = [];
+
+          snapshot.forEach(childSnapshot => {
+            applicants.push(childSnapshot.val());
+          });
+          AddAllItemsToTable(applicants);
+        });
+      }
+
+      
+
+      window.onload = GetAllDataOnce;
+      function login() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+  
+        if (username === 'CHadmin1289' && password === 'CHadminpass8912') {
+          alert('Login successful');
+          window.location.href = 'main.html'; // Redirect to main.html
+        } else {
+          alert('Invalid username or password');
+        }
+      }
+    </script>
+
+    
+
+    
+
+    
+
+        <hr>
+        <div class="credit">
+          &copy; 2024 <span>Culinary Harbor.</span> All rights reserved.
+        </div>
+      </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
+
 -->
