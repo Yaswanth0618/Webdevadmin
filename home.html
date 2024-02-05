@@ -85,8 +85,22 @@
       <p id="separator">---------------------------------------------------------------------------------------------------------------------------------------------------------</p>
       <h3>Applicant Responses</h3>
       <br>
-      <p id="applicantFullName"></p>
-      <p id="applicantForm"></p>
+      <p id="applicationForm"></p>
+      <p id="fullName"></p>
+      <p id="email"></p>
+      <p id="dob"></p>
+      <p id="address"></p>
+      <p id="state"></p>
+      <p id="zip"></p>
+      <p id="education"></p>
+      <p id="employmenthistory"></p>
+      <p id="skillsandcertifications"></p>
+      <p id="whyworkhere"></p>
+      <p id="expectedsalary"></p>
+      <p id="bestcandidateskills"></p>
+      <p id="motivationsatwork"></p>
+      <p id="coverletter"></p>
+
     </div>
 
     <script type="module">
@@ -96,7 +110,7 @@
 
       
 
-      function AddItemToTable(fullName, applicationForm){
+      function AddItemToTable(fullName, applicationForm, email, dob, address, state, zip, education, employmenthistory, skillsandcertifications, whyworkhere, expectedsalary, bestcandidateskills, motivationsatwork, coverletter){
         let trow = document.createElement("tr");
         let td1 = document.createElement('td');
         let td2 = document.createElement('td');
@@ -114,19 +128,42 @@
         if (applicationForm == "General Manager Application Form"){
           acceptButton.addEventListener('click', function() {
       
-            document.getElementById('applicantFullName').textContent = `Full Name: ${fullName}`;
-            document.getElementById('applicantForm').textContent = `Application Form: ${applicationForm}`;
-
+            document.getElementById('applicationForm').textContent = `Application Form: ${applicationForm}`;
+            document.getElementById('fullName').textContent = `Full Name: ${fullName}`;
+            document.getElementById('email').textContent = `Email: ${email}`;
+            document.getElementById('dob').textContent = `DOB: ${dob}`;
+            document.getElementById('address').textContent = `Address: ${address}`;
+            document.getElementById('state').textContent = `State: ${state}`;
+            document.getElementById('zip').textContent = `ZIP: ${zip}`;
+            document.getElementById('education').textContent = `Highest Level of Education: ${education}`;
+            document.getElementById('employmenthistory').textContent = `Employment History: ${employmenthistory}`;
+            document.getElementById('skillsandcertifications').textContent = `Skills and Certifications: ${skillsandcertifications}`;
+            document.getElementById('whyworkhere').textContent = `Why Work Here: ${whyworkhere}`;
+            document.getElementById('expectedsalary').textContent = `Expected Salary: ${expectedsalary}`;
+            document.getElementById('bestcandidateskills').textContent = `Best Candidate Skills: ${bestcandidateskills}`;
+            document.getElementById('motivationsatwork').textContent = `Motivations At Work: ${motivationsatwork}`;
+            document.getElementById('coverletter').textContent = `Cover Letter: ${coverletter}`;
             document.getElementById('detailsPanel').classList.remove('hidden');
+            
           });
         }
         //Cashier
         if (applicationForm == "Cashier Application Form"){
           acceptButton.addEventListener('click', function() {
 
-            document.getElementById('applicantFullName').textContent = `Full Name: ${fullName}`;
-            document.getElementById('applicantForm').textContent = `Application Form: ${applicationForm}`;
-
+            document.getElementById('applicationForm').textContent = `Application Form: ${applicationForm}`;
+            document.getElementById('fullName').textContent = `Full Name: ${fullName}`;
+            document.getElementById('email').textContent = `Email: ${email}`;
+            document.getElementById('dob').textContent = `DOB: ${dob}`;
+            document.getElementById('address').textContent = `Address: ${address}`;
+            document.getElementById('state').textContent = `State: ${state}`;
+            document.getElementById('zip').textContent = `ZIP: ${zip}`;
+            document.getElementById('employmenthistory').textContent = `Employment History: ${employmenthistory}`;
+            document.getElementById('whyworkhere').textContent = `Why Work Here: ${whyworkhere}`;
+            document.getElementById('expectedsalary').textContent = `Expected Salary: ${expectedsalary}`;
+            document.getElementById('bestcandidateskills').textContent = `Best Candidate Skills: ${bestcandidateskills}`;
+            document.getElementById('motivationsatwork').textContent = `Motivations At Work: ${motivationsatwork}`;
+            document.getElementById('coverletter').textContent = `Cover Letter: ${coverletter}`;
             document.getElementById('detailsPanel').classList.remove('hidden');
           });
         }
@@ -134,9 +171,19 @@
         if (applicationForm == "Waiter/Waitress Application Form"){
           acceptButton.addEventListener('click', function() {
 
-            document.getElementById('applicantFullName').textContent = `Full Name: ${fullName}`;
-            document.getElementById('applicantForm').textContent = `Application Form: ${applicationForm}`;
-
+            document.getElementById('applicationForm').textContent = `Application Form: ${applicationForm}`;
+            document.getElementById('fullName').textContent = `Full Name: ${fullName}`;
+            document.getElementById('email').textContent = `Email: ${email}`;
+            document.getElementById('dob').textContent = `DOB: ${dob}`;
+            document.getElementById('address').textContent = `Address: ${address}`;
+            document.getElementById('state').textContent = `State: ${state}`;
+            document.getElementById('zip').textContent = `ZIP: ${zip}`;
+            document.getElementById('employmenthistory').textContent = `Employment History: ${employmenthistory}`;
+            document.getElementById('whyworkhere').textContent = `Why Work Here: ${whyworkhere}`;
+            document.getElementById('expectedsalary').textContent = `Expected Salary: ${expectedsalary}`;
+            document.getElementById('bestcandidateskills').textContent = `Best Candidate Skills: ${bestcandidateskills}`;
+            document.getElementById('motivationsatwork').textContent = `Motivations At Work: ${motivationsatwork}`;
+            document.getElementById('coverletter').textContent = `Cover Letter: ${coverletter}`;
             document.getElementById('detailsPanel').classList.remove('hidden');
           });
         }
@@ -144,9 +191,21 @@
         if (applicationForm == "Sous Chef Application Form"){
           acceptButton.addEventListener('click', function() {
 
-            document.getElementById('applicantFullName').textContent = `Full Name: ${fullName}`;
-            document.getElementById('applicantForm').textContent = `Application Form: ${applicationForm}`;
-
+            document.getElementById('applicationForm').textContent = `Application Form: ${applicationForm}`;
+            document.getElementById('fullName').textContent = `Full Name: ${fullName}`;
+            document.getElementById('email').textContent = `Email: ${email}`;
+            document.getElementById('dob').textContent = `DOB: ${dob}`;
+            document.getElementById('address').textContent = `Address: ${address}`;
+            document.getElementById('state').textContent = `State: ${state}`;
+            document.getElementById('zip').textContent = `ZIP: ${zip}`;
+            document.getElementById('education').textContent = `Highest Level of Education: ${education}`;
+            document.getElementById('employmenthistory').textContent = `Employment History: ${employmenthistory}`;
+            document.getElementById('skillsandcertifications').textContent = `Skills and Certifications: ${skillsandcertifications}`;
+            document.getElementById('whyworkhere').textContent = `Why Work Here: ${whyworkhere}`;
+            document.getElementById('expectedsalary').textContent = `Expected Salary: ${expectedsalary}`;
+            document.getElementById('bestcandidateskills').textContent = `Best Candidate Skills: ${bestcandidateskills}`;
+            document.getElementById('motivationsatwork').textContent = `Motivations At Work: ${motivationsatwork}`;
+            document.getElementById('coverletter').textContent = `Cover Letter: ${coverletter}`;
             document.getElementById('detailsPanel').classList.remove('hidden');
           });
         }
@@ -168,9 +227,25 @@
         stdNo = 0;
         tbody.innerHTML="";
         TheApplicant.forEach(element => {
-          AddItemToTable(element.fullName, element.applicationForm);
-        });
-      }
+          AddItemToTable(
+              element.fullName,
+              element.applicationForm,
+              element.email,
+              element.dob,
+              element.address,
+              element.state,
+              element.zip,
+              element.education,
+              element.employmenthistory,
+              element.skillsandcertifications,
+              element.whyworkhere,
+              element.expectedsalary,
+              element.bestcandidateskills,
+              element.motivationsatwork,
+              element.coverletter
+          );
+      });
+    }
 
       
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
