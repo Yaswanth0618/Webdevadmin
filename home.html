@@ -35,6 +35,24 @@
     <!-- Your Custom JavaScript -->
   </head>
 
+  <style>
+    .accept-button {
+      color: white;
+      background-color: red;
+    }
+
+    .accept-button:hover{
+      color: white;
+      background-color: red;
+    }
+
+
+
+    .table td:not(:last-child) {
+    font-size: 16px; /* Adjust the font size as needed */
+  }
+  </style>
+
   <body>
     <header>
       <a href="#" class="logo">
@@ -57,28 +75,90 @@
           <th>Applicant Number</th>
           <th>Full Name</th>
           <th>Application Form</th>
+          <th>Control Center</th>
         </thead>
         <tbody id = "tbody1"></tbody>
       </table>
     </div>
+    
+    <div id="detailsPanel" class="hidden">
+      <p id="separator">---------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+      <h3>Applicant Responses</h3>
+      <br>
+      <p id="applicantFullName"></p>
+      <p id="applicantForm"></p>
+    </div>
 
     <script type="module">
+      
       var stdNo = 0;
       var tbody = document.getElementById('tbody1');
+
+      
 
       function AddItemToTable(fullName, applicationForm){
         let trow = document.createElement("tr");
         let td1 = document.createElement('td');
         let td2 = document.createElement('td');
         let td3 = document.createElement('td');
+        let td4 = document.createElement('td');
 
         td1.innerHTML = ++stdNo;
         td2.innerHTML = fullName;
         td3.innerHTML = applicationForm;
 
+        let acceptButton = document.createElement('button');
+        acceptButton.textContent = 'View';
+        acceptButton.classList.add('btn', 'btn-primary', 'mr-1', 'accept-button');
+        // GM
+        if (applicationForm == "General Manager Application Form"){
+          acceptButton.addEventListener('click', function() {
+      
+            document.getElementById('applicantFullName').textContent = `Full Name: ${fullName}`;
+            document.getElementById('applicantForm').textContent = `Application Form: ${applicationForm}`;
+
+            document.getElementById('detailsPanel').classList.remove('hidden');
+          });
+        }
+        //Cashier
+        if (applicationForm == "Cashier Application Form"){
+          acceptButton.addEventListener('click', function() {
+
+            document.getElementById('applicantFullName').textContent = `Full Name: ${fullName}`;
+            document.getElementById('applicantForm').textContent = `Application Form: ${applicationForm}`;
+
+            document.getElementById('detailsPanel').classList.remove('hidden');
+          });
+        }
+        //waiter/waitress
+        if (applicationForm == "Waiter/Waitress Application Form"){
+          acceptButton.addEventListener('click', function() {
+
+            document.getElementById('applicantFullName').textContent = `Full Name: ${fullName}`;
+            document.getElementById('applicantForm').textContent = `Application Form: ${applicationForm}`;
+
+            document.getElementById('detailsPanel').classList.remove('hidden');
+          });
+        }
+        //Sous Chef
+        if (applicationForm == "Sous Chef Application Form"){
+          acceptButton.addEventListener('click', function() {
+
+            document.getElementById('applicantFullName').textContent = `Full Name: ${fullName}`;
+            document.getElementById('applicantForm').textContent = `Application Form: ${applicationForm}`;
+
+            document.getElementById('detailsPanel').classList.remove('hidden');
+          });
+        }
+
+        td4.appendChild(acceptButton);
+
+
         trow.appendChild(td1);
         trow.appendChild(td2);
         trow.appendChild(td3);
+        trow.appendChild(td4); // Add td for control buttons
+
 
         tbody.appendChild(trow);
 
@@ -160,10 +240,7 @@
 
     
 
-        <hr>
-        <div class="credit">
-          &copy; 2024 <span>Culinary Harbor.</span> All rights reserved.
-        </div>
+        
       </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
