@@ -206,6 +206,55 @@ header .apply_btn .btn:hover {
   display: none;
 }
 
+/* main.css */
+#detailsPanel {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+#detailsPanel h3 {
+  margin-bottom: 10px;
+}
+
+#detailsPanel p {
+  margin-bottom: 5px;
+  font-size: 16px; /* Increase font size */
+}
+
+#detailsPanel #separator {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+#detailsPanel .response-section {
+  margin-bottom: 15px;
+}
+
+#detailsPanel strong:before {
+  content: ": ";
+  font-weight: bold;
+}
+
+#detailsPanel button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#detailsPanel button:hover {
+  background-color: #c82333;
+}
+
+
+
+
 
 
 
