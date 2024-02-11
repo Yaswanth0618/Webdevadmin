@@ -1,6 +1,6 @@
 src = "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"
 
-localStorage.setItem("isLoggedIn", "true");
+localStorage.setItem("isLoggedIn", "false");
 function login() {
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
