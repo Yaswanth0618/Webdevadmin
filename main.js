@@ -1,4 +1,4 @@
-
+/** 
 localStorage.setItem("isLoggedIn", "false");
 function login() {
   var username = document.getElementById("username").value;
@@ -12,5 +12,6 @@ function login() {
     alert("Invalid username or password");
   }
 }
+*/
 
 
