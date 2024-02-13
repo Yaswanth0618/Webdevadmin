@@ -1,5 +1,68 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Raleway:wght@200;300;400;600;700&display=swap");
 
+.bodylogin {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-info {
+  background-color: #fff;
+  padding: 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  max-width: 100%;
+}
+
+.containerxy {
+  align-self: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  max-width: 100%;
+}
+
+.containerxy h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.containerxy form input {
+  align-self: center;
+  width: calc(100% - 22px); 
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.containerxy form  button {
+  align-self: center;
+  margin-left: 10px;
+  width: 92%;
+  padding: 10px;
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.containerxy form .submit:hover {
+  background-color: red;
+}
+
+
 * {
   font-family: "Nunito", sans-serif;
   margin: 0;
@@ -25,7 +88,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+.bodymain {
   font-family: "Nunito", sans-serif;
   margin-top: 5.5rem;
   font-weight: 400;
@@ -265,4 +328,73 @@ header .apply_btn .btn:hover {
 
 #detailsPanel button:hover {
   background-color: #c82333;
+}
+
+.accept-button {
+  margin-top: 10px;
+  color: white;
+  background-color: green;
+}
+
+.accept-button:hover{
+  color: white;
+  background-color: green;
+}
+
+.view-button {
+  margin-top: 10px;
+  color: white;
+  background-color: blue;
+  padding: 5px 10px; 
+  font-size: 12px; 
+  line-height: 1;
+}
+
+.view-button:hover{
+  color: white;
+  background-color: blue;
+}
+
+.reject-button {
+  margin-top: 10px;
+  color: white;
+  background-color: red;
+}
+
+.reject-button:hover{
+  color: white;
+  background-color: red;
+}
+
+.accept-button,
+.reject-button {
+  padding: 5px 10px;
+  font-size: 12px; 
+  line-height: 1; 
+}
+
+
+
+.main-website-btn .btn2 a {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  margin-left: 0px; 
+}
+
+.main-website-btn .btn2 a:hover {
+  color: white;
+  background-color: red;
+}
+
+.table td:not(:last-child) {
+font-size: 16px; 
+}
+
+.bold-before-colon::before {
+font-weight: bold;
 }
