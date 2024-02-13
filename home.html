@@ -169,6 +169,8 @@
             message => alert("Decision Sent Successfully!")
           );
 
+        
+
           //remove application from db
           remove(ref(db, 'fullName/' + fullName));
 
@@ -202,7 +204,7 @@
             "We wish you all the best in your job search and in your future endeavors. Thank you once again for your interest in Culinary Harbor.\n"
           }).then(
             message => alert("Decision Sent Successfully!")
-          );
+          );  
 
           //remove application from db
           remove(ref(db, 'fullName/' + fullName));
