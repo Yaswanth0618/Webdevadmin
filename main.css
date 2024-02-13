@@ -72,6 +72,21 @@ section:nth-child(even) {
   align-items: center;
 }
 
+.btn2 {
+  display: inline-block;
+  font-size: 1.7rem;
+  color: black;
+  background: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.8rem 3rem;
+  transition: all 0.2s linear;
+  margin-top: -0.8rem;
+  align-items: center;
+}
+
+
+
 .log_text {
   display: flex;
   align-items: center;
