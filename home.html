@@ -43,7 +43,7 @@
 
       <!--Back to main website button-->
       <div class="main-website-btn">
-        <button class="btn2"><a href="https://yaswanth0618.github.io/WebDevFBLA/">Back to Home Website</a></button>
+        <button class="btn2"><a href="https://yaswanth0618.github.io/WebDevFBLA/" target="_blank">Back to Home Website</a></button>
       </div>
 
       <!-- <p>Experience the taste of excellence</p> -->
@@ -166,10 +166,8 @@
             "As we move forward, we will provide you with all the necessary information regarding your start date, orientation, and any other details you may need to know before joining our team. We are confident that you will quickly become an integral part of the Culinary Harbor family.\n" + 
             "Once again, congratulations on your acceptance, and welcome aboard! We are thrilled to have you join us and look forward to working together to create memorable culinary experiences."
           }).then(
-            message => alert("Decision Sent Successfully!")
+            message => alert("Decision Sent Successful!")
           );
-
-        
 
           //remove application from db
           remove(ref(db, 'fullName/' + fullName));
@@ -203,8 +201,8 @@
             "Please know that this decision was not made lightly, and it does not reflect negatively on your qualifications or experience. We received a large number of applications, and while we were impressed with your credentials, we ultimately had to make difficult choices based on our current needs and requirements.\n" + 
             "We wish you all the best in your job search and in your future endeavors. Thank you once again for your interest in Culinary Harbor.\n"
           }).then(
-            message => alert("Decision Sent Successfully!")
-          );  
+            message => alert("Decision Sent Successful!")
+          );
 
           //remove application from db
           remove(ref(db, 'fullName/' + fullName));
