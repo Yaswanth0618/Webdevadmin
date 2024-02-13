@@ -34,7 +34,7 @@
     }
 
     .container form input {
-      width: calc(100% - 22px); /* Adjusted width */
+      width: calc(100% - 22px); 
       padding: 10px;
       margin-bottom: 10px;
       border: 1px solid #ccc;
@@ -108,8 +108,10 @@
                 if (userData && userData === password) {
                     userFound = true;
                     alert("Login successful");
-                    localStorage.setItem("isLoggedIn", "true"); // Set login status to true
-                    window.location.href = "home.html"; // Redirect to home.html
+                    // Set login status to true
+                    localStorage.setItem("isLoggedIn", "true"); 
+                    // Redirect to home.html
+                    window.location.href = "home.html"; 
                 }
             });
             if (!userFound) {
