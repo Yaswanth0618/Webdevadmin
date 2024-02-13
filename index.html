@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="x-icon" href="admin logo.png" />
+  <!--Title-->
   <title>Culinary Harbor Admin Login Page</title>
+  <!--Style for Login-->
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -57,6 +59,7 @@
 <body>
   <div class="container">
     <h2>Login</h2>
+    <!--Login Form-->
     <form id="loginForm">
       <input type="text" id="username" placeholder="Username">
       <input type="password" id="password" placeholder="Password">
@@ -67,6 +70,7 @@
     
 </body>
 <script type="module">
+  //Get Database
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
   import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
   
@@ -85,15 +89,18 @@
           appId: "1:1032671063739:web:93e3567aade232b2db839e"
         };
 
+        //get values from the form
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
 
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
 
+
         localStorage.setItem("isLoggedIn", "false"); // Set login status to false
 
         const loginRef = ref(db, "login");
+        //Check if the login values match with the actual credentials
         get(loginRef).then((snapshot) => {
             let userFound = false;
             snapshot.forEach((childSnapshot) => {

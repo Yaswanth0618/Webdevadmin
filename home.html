@@ -36,6 +36,7 @@
     <!-- Your Custom JavaScript -->
   </head>
 
+  <!--Style for button and table-->
   <style>
     .accept-button {
       margin-top: 10px;
@@ -109,6 +110,7 @@
     <br>
     
     <div class="container mt-3">
+      <!--Create a table with columns-->
       <table class="table">
         <thead>
           <th>Applicant Number</th>
@@ -124,6 +126,7 @@
       <p id="separator">---------------------------------------------------------------------------------------------------------------------------------------------------------</p>
       <h3>Applicant Responses</h3>
       <br>
+      <!--Create a format for viewing applications-->
       <p><strong id="applicationFormLabel">Application Form</strong>: <span id="applicationForm"></span></p>
       <p><strong id="fullNameLabel">Full Name</strong>: <span id="fullName"></span></p>
       <p><strong id="emailLabel">Email</strong>: <span id="email"></span></p>
@@ -158,6 +161,7 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <script type="module">
+      //Get Database
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
       
   
@@ -180,7 +184,7 @@
       var tbody = document.getElementById('tbody1');
 
       
-
+      //Add items to table from fb db
       function AddItemToTable(fullName, applicationForm, email, dob, address, state, zip, education, employmenthistory, skillsandcertifications, experience, multitask, accuracy, quality, whyworkhere, expectedsalary, bestcandidateskills, motivationsatwork, coverletter){
         let trow = document.createElement("tr");
         let td1 = document.createElement('td');
@@ -192,10 +196,12 @@
         td2.innerHTML = fullName;
         td3.innerHTML = applicationForm;
 
+        //Create a view button
         let viewButton = document.createElement('button');
         viewButton.textContent = 'View';
         viewButton.classList.add('btn', 'btn-primary', 'mr-1', 'view-button');
 
+        //Create an accept button
         let acceptButton = document.createElement('button');
         acceptButton.textContent = 'Accept';
         acceptButton.classList.add('btn', 'btn-success', 'mr-1', 'accept-button', 'btn-sm');
@@ -213,11 +219,13 @@
             message => alert(message)
           );
 
+          //remove application from db
           remove(ref(db, 'fullName/' + fullName));
 
           var rows = document.querySelectorAll("#tbody1 tr");
           rows.forEach(function(row) {
             if (row.cells[1].textContent == fullName) {
+              //remove application from table
               row.remove();
             }
           });
@@ -243,13 +251,14 @@
             message => alert(message)
           );
 
+          //remove application from db
           remove(ref(db, 'fullName/' + fullName));
 
 
           var rows = document.querySelectorAll("#tbody1 tr");
           rows.forEach(function(row) {
             if (row.cells[1].textContent == fullName) {
-              
+              //remove application from table
               row.remove();
             }
           });
@@ -494,6 +503,7 @@
 
       }
 
+      //Add all items from fb db to the table
       function AddAllItemsToTable(TheApplicant){
         stdNo = 0;
         tbody.innerHTML="";
@@ -525,7 +535,7 @@
       
       
 
-
+      //get data from fb db to view applications
       function GetAllDataOnce(){
         const dbRef = ref(db);
 
@@ -553,7 +563,7 @@
         });
       }
       
-
+      //once window loads, it get the data automatically
       window.onload = GetAllDataOnce;    
     </script>
 
