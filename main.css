@@ -169,7 +169,7 @@ header .signout_btn .btn {
   border-radius: 0.5rem;
   font-size: 1.8rem;
   transition: all 0.1s linear;
-  margin-left: 10px;
+  margin-left: 0px;
 }
 
 header .signout_btn {
