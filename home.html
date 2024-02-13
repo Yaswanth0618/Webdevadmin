@@ -1,38 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="x-icon" href="icon1.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <title>Admin Portal</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="x-icon" href="icon1.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- font awesome link -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <title>Admin Portal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <!-- Swiper CSS
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    /> -->
+  <!-- font awesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  </head>
+  <link rel="stylesheet" href="main.css" />
 
-  <!--Style for button and table-->
   <style>
     .accept-button {
       margin-top: 10px;
@@ -40,7 +26,7 @@
       background-color: green;
     }
 
-    .accept-button:hover{
+    .accept-button:hover {
       color: white;
       background-color: green;
     }
@@ -49,12 +35,12 @@
       margin-top: 10px;
       color: white;
       background-color: blue;
-      padding: 5px 10px; 
-      font-size: 12px; 
+      padding: 5px 10px;
+      font-size: 12px;
       line-height: 1;
     }
 
-    .view-button:hover{
+    .view-button:hover {
       color: white;
       background-color: blue;
     }
@@ -65,7 +51,7 @@
       background-color: red;
     }
 
-    .reject-button:hover{
+    .reject-button:hover {
       color: white;
       background-color: red;
     }
@@ -73,462 +59,470 @@
     .accept-button,
     .reject-button {
       padding: 5px 10px;
-      font-size: 12px; 
-      line-height: 1; 
+      font-size: 12px;
+      line-height: 1;
     }
 
 
-  
-  .main-website-btn .btn2 a {
+
+    .main-website-btn .btn2 a {
       text-decoration: none;
       color: black;
       background-color: white;
-      
+
       padding: 5px 10px;
       border: none;
       border-radius: 10px;
-      margin-left: 0px; 
-  }
-  
-  .main-website-btn .btn2 a:hover {
+      margin-left: 0px;
+    }
+
+    .main-website-btn .btn2 a:hover {
       color: white;
       background-color: red;
-  }
+    }
 
-  .table td:not(:last-child) {
-    font-size: 16px; 
-  }
+    .table td:not(:last-child) {
+      font-size: 16px;
+    }
 
-  .bold-before-colon::before {
-    font-weight: bold;
-}
+    .bold-before-colon::before {
+      font-weight: bold;
+    }
   </style>
 
-  <body>
-    <header>
-      <a href="#" class="logo">
-        <img src="admin logo.png" width="50px" />
-        <div class="log_text">Admin Portal</div>
-      </a>
+</head>
 
-      <!--Back to main website button-->
-      <div class="main-website-btn">
-        <button class="btn2"><a href="https://yaswanth0618.github.io/WebDevFBLA/">Back to Home Website</a></button>
-      </div>
+<!--Style for button and table-->
 
-      <!-- <p>Experience the taste of excellence</p> -->
 
-      <div class="signout_btn">
-        <button class="btn"><a href="index.html">Signout</a></button>
-        
-        <i class="fa-solid fa-bars" id="bar"></i>
-      </div>
-    </header>
+<body>
+  <header>
+    <a href="#" class="logo">
+      <img src="admin logo.png" width="50px" />
+      <div class="log_text">Admin Portal</div>
+    </a>
+
+    <!--Back to main website button-->
+    <div class="main-website-btn">
+      <button class="btn2"><a href="https://yaswanth0618.github.io/WebDevFBLA/">Back to Home</a></button>
+    </div>
+
+    <!-- <p>Experience the taste of excellence</p> -->
+
+    <div class="signout_btn">
+      <button class="btn"><a href="index.html">Signout</a></button>
+
+      <i class="fa-solid fa-bars" id="bar"></i>
+    </div>
+  </header>
+  <br>
+
+  <div class="container mt-3">
     <br>
-    
-    <div class="container mt-3">
-      <br>
-      <br>
-      <!--Create a table with columns-->
-      <table class="table">
-        <thead>
-          <th>Applicant Number</th>
-          <th>Full Name</th>
-          <th>Application Form</th>
-          <th>Control Center</th>
-        </thead>
-        <tbody id = "tbody1"></tbody>
-      </table>
-    </div>
-    
-    <div id="detailsPanel" class="hidden">
-      <p id="separator">---------------------------------------------------------------------------------------------------------------------------------------------------------</p>
-      <h3>Applicant Responses</h3>
-      <br>
-      <!--Create a format for viewing applications-->
-      <p><strong id="applicationFormLabel">Application Form</strong>: <span id="applicationForm"></span></p>
-      <p><strong id="fullNameLabel">Full Name</strong>: <span id="fullName"></span></p>
-      <p><strong id="emailLabel">Email</strong>: <span id="email"></span></p>
-      <p><strong id="dobLabel">DOB</strong>: <span id="dob"></span></p>
-      <p><strong id="addressLabel">Address</strong>: <span id="address"></span></p>
-      <p><strong id="stateLabel">State</strong>: <span id="state"></span></p>
-      <p><strong id="zipLabel">ZIP</strong>: <span id="zip"></span></p>
-      <p><strong id="educationLabel">Education</strong>: <span id="education"></span></p>
-      <p><strong id="coverLetterLabel">Cover Letter</strong>: <span id="coverletter"></span></p>
-      <p><strong id="employmentHistoryLabel">Employment History</strong>: <span id="employmenthistory"></span></p>
-      <p><strong id="skillsCertificationsLabel">Skills and Certifications</strong>: <span id="skillsandcertifications"></span></p>
-      <p><strong id="experienceLabel">Experience</strong>: <span id="experience"></span></p>
-      <p><strong id="multitaskLabel">Multitask</strong>: <span id="multitask"></span></p>
-      <p><strong id="accuracyLabel">Accuracy</strong>: <span id="accuracy"></span></p>
-      <p><strong id="qualityLabel">Quality</strong>: <span id="quality"></span></p>
-      <p><strong id="whyWorkHereLabel">Why Work Here</strong>: <span id="whyworkhere"></span></p>
-      <p><strong id="expectedSalaryLabel">Expected Salary</strong>: <span id="expectedsalary"></span></p>
-      <p><strong id="bestCandidateSkillsLabel">Best Candidate Skills</strong>: <span id="bestcandidateskills"></span></p>
-      <p><strong id="motivationsAtWorkLabel">Motivations At Work</strong>: <span id="motivationsatwork"></span></p>
-      
+    <br>
+    <!--Create a table with columns-->
+    <table class="table">
+      <thead>
+        <th>Applicant Number</th>
+        <th>Full Name</th>
+        <th>Application Form</th>
+        <th>Control Center</th>
+      </thead>
+      <tbody id="tbody1"></tbody>
+    </table>
+  </div>
 
-    </div>
-
-    <script>
-      // Check if the user is logged in
-      if (!localStorage.getItem('isLoggedIn') || localStorage.getItem('isLoggedIn') !== 'true') {
-        // Redirect to the login page
-        window.location.href = 'index.html';
-      }
-    </script>
-
-    
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-
-    <script type="module">
-      //Get Database
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-      
-  
-      const firebaseConfig = {
-        apiKey: "AIzaSyAO9zhttsR2jhYQPBpsNiAzBPPMD8ZJtno",
-        authDomain: "fbla-restaurant-db.firebaseapp.com",
-        databaseURL: "https://fbla-restaurant-db-default-rtdb.firebaseio.com",
-        projectId: "fbla-restaurant-db",
-        storageBucket: "fbla-restaurant-db.appspot.com",
-        messagingSenderId: "1032671063739",
-        appId: "1:1032671063739:web:93e3567aade232b2db839e"
-      };
+  <div id="detailsPanel" class="hidden">
+    <p id="separator">
+      ---------------------------------------------------------------------------------------------------------------------------------------------------------
+    </p>
+    <h3>Applicant Responses</h3>
+    <br>
+    <!--Create a format for viewing applications-->
+    <p><strong id="applicationFormLabel">Application Form</strong>: <span id="applicationForm"></span></p>
+    <p><strong id="fullNameLabel">Full Name</strong>: <span id="fullName"></span></p>
+    <p><strong id="emailLabel">Email</strong>: <span id="email"></span></p>
+    <p><strong id="dobLabel">DOB</strong>: <span id="dob"></span></p>
+    <p><strong id="addressLabel">Address</strong>: <span id="address"></span></p>
+    <p><strong id="stateLabel">State</strong>: <span id="state"></span></p>
+    <p><strong id="zipLabel">ZIP</strong>: <span id="zip"></span></p>
+    <p><strong id="educationLabel">Education</strong>: <span id="education"></span></p>
+    <p><strong id="coverLetterLabel">Cover Letter</strong>: <span id="coverletter"></span></p>
+    <p><strong id="employmentHistoryLabel">Employment History</strong>: <span id="employmenthistory"></span></p>
+    <p><strong id="skillsCertificationsLabel">Skills and Certifications</strong>: <span
+        id="skillsandcertifications"></span></p>
+    <p><strong id="experienceLabel">Experience</strong>: <span id="experience"></span></p>
+    <p><strong id="multitaskLabel">Multitask</strong>: <span id="multitask"></span></p>
+    <p><strong id="accuracyLabel">Accuracy</strong>: <span id="accuracy"></span></p>
+    <p><strong id="qualityLabel">Quality</strong>: <span id="quality"></span></p>
+    <p><strong id="whyWorkHereLabel">Why Work Here</strong>: <span id="whyworkhere"></span></p>
+    <p><strong id="expectedSalaryLabel">Expected Salary</strong>: <span id="expectedsalary"></span></p>
+    <p><strong id="bestCandidateSkillsLabel">Best Candidate Skills</strong>: <span id="bestcandidateskills"></span></p>
+    <p><strong id="motivationsAtWorkLabel">Motivations At Work</strong>: <span id="motivationsatwork"></span></p>
 
 
-      const app = initializeApp(firebaseConfig);
-      import { getDatabase, ref, child, onValue, get, remove} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
-      const db = getDatabase();
-      
-      var stdNo = 0;
-      var tbody = document.getElementById('tbody1');
+  </div>
 
-      
-      //Add items to table from fb db
-      function AddItemToTable(fullName, applicationForm, email, dob, address, state, zip, education, coverletter, employmenthistory, skillsandcertifications, experience, multitask, accuracy, quality, whyworkhere, expectedsalary, bestcandidateskills, motivationsatwork){
-        let trow = document.createElement("tr");
-        let td1 = document.createElement('td');
-        let td2 = document.createElement('td');
-        let td3 = document.createElement('td');
-        let td4 = document.createElement('td');
+  <script>
+    // Check if the user is logged in
+    if (!localStorage.getItem('isLoggedIn') || localStorage.getItem('isLoggedIn') !== 'true') {
+      // Redirect to the login page
+      window.location.href = 'index.html';
+    }
+  </script>
 
-        td1.innerHTML = ++stdNo;
-        td2.innerHTML = fullName;
-        td3.innerHTML = applicationForm;
 
-        //Create a view button
-        let viewButton = document.createElement('button');
-        viewButton.textContent = 'View';
-        viewButton.classList.add('btn', 'btn-primary', 'mr-1', 'view-button');
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-        //Create an accept button
-        let acceptButton = document.createElement('button');
-        acceptButton.textContent = 'Accept';
-        acceptButton.classList.add('btn', 'btn-success', 'mr-1', 'accept-button', 'btn-sm');
-        acceptButton.addEventListener('click', function() {
-          Email.send({
-            SecureToken : "5fa14da7-fa75-4b98-b8f8-032d3a412fe9",
-            To : email,
-            From : 'culinaryharbor30@gmail.com',
-            Subject : "Culinary Harbor: Application Decision",
-            Body : "I am delighted to inform you that your application for the role at Culinary Harbor has been accepted! Congratulations on this exciting opportunity to join our team.\n" + 
-            "Your qualifications, experience, and enthusiasm for the culinary arts truly stood out among the many applicants we received. We believe that your skills and passion will greatly contribute to our team and help us continue to deliver exceptional dining experiences to our patrons.\n" + 
-            "As we move forward, we will provide you with all the necessary information regarding your start date, orientation, and any other details you may need to know before joining our team. We are confident that you will quickly become an integral part of the Culinary Harbor family.\n" + 
+  <script type="module">
+    //Get Database
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAO9zhttsR2jhYQPBpsNiAzBPPMD8ZJtno",
+      authDomain: "fbla-restaurant-db.firebaseapp.com",
+      databaseURL: "https://fbla-restaurant-db-default-rtdb.firebaseio.com",
+      projectId: "fbla-restaurant-db",
+      storageBucket: "fbla-restaurant-db.appspot.com",
+      messagingSenderId: "1032671063739",
+      appId: "1:1032671063739:web:93e3567aade232b2db839e"
+    };
+
+
+    const app = initializeApp(firebaseConfig);
+    import { getDatabase, ref, child, onValue, get, remove } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+    const db = getDatabase();
+
+    var stdNo = 0;
+    var tbody = document.getElementById('tbody1');
+
+
+    //Add items to table from fb db
+    function AddItemToTable(fullName, applicationForm, email, dob, address, state, zip, education, coverletter, employmenthistory, skillsandcertifications, experience, multitask, accuracy, quality, whyworkhere, expectedsalary, bestcandidateskills, motivationsatwork) {
+      let trow = document.createElement("tr");
+      let td1 = document.createElement('td');
+      let td2 = document.createElement('td');
+      let td3 = document.createElement('td');
+      let td4 = document.createElement('td');
+
+      td1.innerHTML = ++stdNo;
+      td2.innerHTML = fullName;
+      td3.innerHTML = applicationForm;
+
+      //Create a view button
+      let viewButton = document.createElement('button');
+      viewButton.textContent = 'View';
+      viewButton.classList.add('btn', 'btn-primary', 'mr-1', 'view-button');
+
+      //Create an accept button
+      let acceptButton = document.createElement('button');
+      acceptButton.textContent = 'Accept';
+      acceptButton.classList.add('btn', 'btn-success', 'mr-1', 'accept-button', 'btn-sm');
+      acceptButton.addEventListener('click', function () {
+        Email.send({
+          SecureToken: "5fa14da7-fa75-4b98-b8f8-032d3a412fe9",
+          To: email,
+          From: 'culinaryharbor30@gmail.com',
+          Subject: "Culinary Harbor: Application Decision",
+          Body: "I am delighted to inform you that your application for the role at Culinary Harbor has been accepted! Congratulations on this exciting opportunity to join our team.\n" +
+            "Your qualifications, experience, and enthusiasm for the culinary arts truly stood out among the many applicants we received. We believe that your skills and passion will greatly contribute to our team and help us continue to deliver exceptional dining experiences to our patrons.\n" +
+            "As we move forward, we will provide you with all the necessary information regarding your start date, orientation, and any other details you may need to know before joining our team. We are confident that you will quickly become an integral part of the Culinary Harbor family.\n" +
             "Once again, congratulations on your acceptance, and welcome aboard! We are thrilled to have you join us and look forward to working together to create memorable culinary experiences."
-          }).then(
-            message => alert(message)
-          );
+        }).then(
+          message => alert(message)
+        );
 
-          //remove application from db
-          remove(ref(db, 'fullName/' + fullName));
+        //remove application from db
+        remove(ref(db, 'fullName/' + fullName));
 
-          var rows = document.querySelectorAll("#tbody1 tr");
-          rows.forEach(function(row) {
-            if (row.cells[1].textContent == fullName) {
-              //remove application from table
-              row.remove();
-            }
-          });
-
-
+        var rows = document.querySelectorAll("#tbody1 tr");
+        rows.forEach(function (row) {
+          if (row.cells[1].textContent == fullName) {
+            //remove application from table
+            row.remove();
+          }
         });
 
-        
-      
 
-        // Create reject button
-        let rejectButton = document.createElement('button');
-        rejectButton.textContent = 'Reject';
-        rejectButton.classList.add('btn', 'btn-danger', 'reject-button', 'btn-sm');
-        rejectButton.addEventListener('click', function() {
-          Email.send({
-            SecureToken : "5fa14da7-fa75-4b98-b8f8-032d3a412fe9",
-            To : email,
-            From : 'culinaryharbor30@gmail.com',
-            Subject : "Culinary Harbor: Application Decision",
-            Body : "I hope this message finds you well. I wanted to reach out to provide an update regarding your recent application for the role at Culinary Harbor.\n" + 
-            "After careful consideration and review of all applications received, we regret to inform you that we have decided not to move forward with your application at this time.\n" + 
-            "Please know that this decision was not made lightly, and it does not reflect negatively on your qualifications or experience. We received a large number of applications, and while we were impressed with your credentials, we ultimately had to make difficult choices based on our current needs and requirements.\n" + 
+      });
+
+
+
+
+      // Create reject button
+      let rejectButton = document.createElement('button');
+      rejectButton.textContent = 'Reject';
+      rejectButton.classList.add('btn', 'btn-danger', 'reject-button', 'btn-sm');
+      rejectButton.addEventListener('click', function () {
+        Email.send({
+          SecureToken: "5fa14da7-fa75-4b98-b8f8-032d3a412fe9",
+          To: email,
+          From: 'culinaryharbor30@gmail.com',
+          Subject: "Culinary Harbor: Application Decision",
+          Body: "I hope this message finds you well. I wanted to reach out to provide an update regarding your recent application for the role at Culinary Harbor.\n" +
+            "After careful consideration and review of all applications received, we regret to inform you that we have decided not to move forward with your application at this time.\n" +
+            "Please know that this decision was not made lightly, and it does not reflect negatively on your qualifications or experience. We received a large number of applications, and while we were impressed with your credentials, we ultimately had to make difficult choices based on our current needs and requirements.\n" +
             "We wish you all the best in your job search and in your future endeavors. Thank you once again for your interest in Culinary Harbor.\n"
-          }).then(
-            message => alert(message)
-          );
+        }).then(
+          message => alert(message)
+        );
 
-          //remove application from db
-          remove(ref(db, 'fullName/' + fullName));
+        //remove application from db
+        remove(ref(db, 'fullName/' + fullName));
 
 
-          var rows = document.querySelectorAll("#tbody1 tr");
-          rows.forEach(function(row) {
-            if (row.cells[1].textContent == fullName) {
-              //remove application from table
-              row.remove();
-            }
-          });
-
+        var rows = document.querySelectorAll("#tbody1 tr");
+        rows.forEach(function (row) {
+          if (row.cells[1].textContent == fullName) {
+            //remove application from table
+            row.remove();
+          }
         });
 
-        td4.appendChild(viewButton);
-        td4.appendChild(acceptButton);
-        td4.appendChild(rejectButton);
+      });
 
-        
-        // GM
-        if (applicationForm == "General Manager Application Form") {
-          viewButton.addEventListener('click', function() {
-              // Clear existing content
-              document.getElementById('applicationForm').textContent = "";
-              document.getElementById('fullName').textContent = "";
-              document.getElementById('email').textContent = "";
-              document.getElementById('dob').textContent = "";
-              document.getElementById('address').textContent = "";
-              document.getElementById('state').textContent = "";
-              document.getElementById('zip').textContent = "";
-              document.getElementById('education').textContent = "";
-              document.getElementById('employmenthistory').textContent = "";
-              document.getElementById('skillsandcertifications').textContent = "";
-              document.getElementById('experience').textContent = "";
-              document.getElementById('multitask').textContent = "N/A";
-              document.getElementById('accuracy').textContent = "N/A";
-              document.getElementById('quality').textContent = "N/A";
-              document.getElementById('whyworkhere').textContent = "";
-              document.getElementById('expectedsalary').textContent = "";
-              document.getElementById('bestcandidateskills').textContent = "";
-              document.getElementById('motivationsatwork').textContent = "";
-              document.getElementById('coverletter').textContent = "";
-      
-              // Populate elements with application form data
-              document.getElementById('applicationForm').textContent = `${applicationForm}`;
-              document.getElementById('fullName').textContent = `${fullName}`;
-              document.getElementById('email').textContent = `${email}`;
-              document.getElementById('dob').textContent = `${dob}`;
-              document.getElementById('address').textContent = `${address}`;
-              document.getElementById('state').textContent = `${state}`;
-              document.getElementById('zip').textContent = `${zip}`;
-              document.getElementById('education').textContent = `${education}`;
-              document.getElementById('coverletter').textContent = `${coverletter}`;
-              document.getElementById('employmenthistory').textContent = `${employmenthistory}`;
-              document.getElementById('skillsandcertifications').textContent = `${skillsandcertifications}`;
-              document.getElementById('experience').textContent = `${experience}`;
-              document.getElementById('whyworkhere').textContent = `${whyworkhere}`;
-              document.getElementById('expectedsalary').textContent = `${expectedsalary}`;
-              document.getElementById('bestcandidateskills').textContent = `${bestcandidateskills}`;
-              document.getElementById('motivationsatwork').textContent = `${motivationsatwork}`;
-              
-              // Show details panel
-              document.getElementById('detailsPanel').classList.remove('hidden');
-          });
-        }
-      
-        //Cashier
-        if (applicationForm == "Cashier Application Form") {
-          viewButton.addEventListener('click', function() {
-              // Clear existing content
-              document.getElementById('applicationForm').textContent = "";
-              document.getElementById('fullName').textContent = "";
-              document.getElementById('email').textContent = "";
-              document.getElementById('dob').textContent = "";
-              document.getElementById('address').textContent = "";
-              document.getElementById('state').textContent = "";
-              document.getElementById('zip').textContent = "";
-              document.getElementById('education').textContent = "";
-              document.getElementById('employmenthistory').textContent = "";
-              document.getElementById('skillsandcertifications').textContent = "";
-              document.getElementById('experience').textContent = "N/A";
-              document.getElementById('multitask').textContent = "";
-              document.getElementById('accuracy').textContent = "N/A";
-              document.getElementById('quality').textContent = "N/A";
-              document.getElementById('whyworkhere').textContent = "";
-              document.getElementById('expectedsalary').textContent = "";
-              document.getElementById('bestcandidateskills').textContent = "";
-              document.getElementById('motivationsatwork').textContent = "";
-              document.getElementById('coverletter').textContent = "";
-      
-              // Populate elements with application form data
-              document.getElementById('applicationForm').textContent = `${applicationForm}`;
-              document.getElementById('fullName').textContent = `${fullName}`;
-              document.getElementById('email').textContent = `${email}`;
-              document.getElementById('dob').textContent = `${dob}`;
-              document.getElementById('address').textContent = `${address}`;
-              document.getElementById('state').textContent = `${state}`;
-              document.getElementById('zip').textContent = `${zip}`;
-              document.getElementById('coverletter').textContent = `${coverletter}`;
-              document.getElementById('employmenthistory').textContent = `${employmenthistory}`;
-              document.getElementById('multitask').textContent = `${multitask}`;
-              document.getElementById('whyworkhere').textContent = `${whyworkhere}`;
-              document.getElementById('expectedsalary').textContent = `${expectedsalary}`;
-              document.getElementById('bestcandidateskills').textContent = `${bestcandidateskills}`;
-              document.getElementById('motivationsatwork').textContent = `${motivationsatwork}`;
-              
-              document.getElementById('detailsPanel').classList.remove('hidden');
-          });
+      td4.appendChild(viewButton);
+      td4.appendChild(acceptButton);
+      td4.appendChild(rejectButton);
+
+
+      // GM
+      if (applicationForm == "General Manager Application Form") {
+        viewButton.addEventListener('click', function () {
+          // Clear existing content
+          document.getElementById('applicationForm').textContent = "";
+          document.getElementById('fullName').textContent = "";
+          document.getElementById('email').textContent = "";
+          document.getElementById('dob').textContent = "";
+          document.getElementById('address').textContent = "";
+          document.getElementById('state').textContent = "";
+          document.getElementById('zip').textContent = "";
+          document.getElementById('education').textContent = "";
+          document.getElementById('employmenthistory').textContent = "";
+          document.getElementById('skillsandcertifications').textContent = "";
+          document.getElementById('experience').textContent = "";
+          document.getElementById('multitask').textContent = "N/A";
+          document.getElementById('accuracy').textContent = "N/A";
+          document.getElementById('quality').textContent = "N/A";
+          document.getElementById('whyworkhere').textContent = "";
+          document.getElementById('expectedsalary').textContent = "";
+          document.getElementById('bestcandidateskills').textContent = "";
+          document.getElementById('motivationsatwork').textContent = "";
+          document.getElementById('coverletter').textContent = "";
+
+          // Populate elements with application form data
+          document.getElementById('applicationForm').textContent = `${applicationForm}`;
+          document.getElementById('fullName').textContent = `${fullName}`;
+          document.getElementById('email').textContent = `${email}`;
+          document.getElementById('dob').textContent = `${dob}`;
+          document.getElementById('address').textContent = `${address}`;
+          document.getElementById('state').textContent = `${state}`;
+          document.getElementById('zip').textContent = `${zip}`;
+          document.getElementById('education').textContent = `${education}`;
+          document.getElementById('coverletter').textContent = `${coverletter}`;
+          document.getElementById('employmenthistory').textContent = `${employmenthistory}`;
+          document.getElementById('skillsandcertifications').textContent = `${skillsandcertifications}`;
+          document.getElementById('experience').textContent = `${experience}`;
+          document.getElementById('whyworkhere').textContent = `${whyworkhere}`;
+          document.getElementById('expectedsalary').textContent = `${expectedsalary}`;
+          document.getElementById('bestcandidateskills').textContent = `${bestcandidateskills}`;
+          document.getElementById('motivationsatwork').textContent = `${motivationsatwork}`;
+
+          // Show details panel
+          document.getElementById('detailsPanel').classList.remove('hidden');
+        });
       }
-      
+
+      //Cashier
+      if (applicationForm == "Cashier Application Form") {
+        viewButton.addEventListener('click', function () {
+          // Clear existing content
+          document.getElementById('applicationForm').textContent = "";
+          document.getElementById('fullName').textContent = "";
+          document.getElementById('email').textContent = "";
+          document.getElementById('dob').textContent = "";
+          document.getElementById('address').textContent = "";
+          document.getElementById('state').textContent = "";
+          document.getElementById('zip').textContent = "";
+          document.getElementById('education').textContent = "";
+          document.getElementById('employmenthistory').textContent = "";
+          document.getElementById('skillsandcertifications').textContent = "";
+          document.getElementById('experience').textContent = "N/A";
+          document.getElementById('multitask').textContent = "";
+          document.getElementById('accuracy').textContent = "N/A";
+          document.getElementById('quality').textContent = "N/A";
+          document.getElementById('whyworkhere').textContent = "";
+          document.getElementById('expectedsalary').textContent = "";
+          document.getElementById('bestcandidateskills').textContent = "";
+          document.getElementById('motivationsatwork').textContent = "";
+          document.getElementById('coverletter').textContent = "";
+
+          // Populate elements with application form data
+          document.getElementById('applicationForm').textContent = `${applicationForm}`;
+          document.getElementById('fullName').textContent = `${fullName}`;
+          document.getElementById('email').textContent = `${email}`;
+          document.getElementById('dob').textContent = `${dob}`;
+          document.getElementById('address').textContent = `${address}`;
+          document.getElementById('state').textContent = `${state}`;
+          document.getElementById('zip').textContent = `${zip}`;
+          document.getElementById('coverletter').textContent = `${coverletter}`;
+          document.getElementById('employmenthistory').textContent = `${employmenthistory}`;
+          document.getElementById('multitask').textContent = `${multitask}`;
+          document.getElementById('whyworkhere').textContent = `${whyworkhere}`;
+          document.getElementById('expectedsalary').textContent = `${expectedsalary}`;
+          document.getElementById('bestcandidateskills').textContent = `${bestcandidateskills}`;
+          document.getElementById('motivationsatwork').textContent = `${motivationsatwork}`;
+
+          document.getElementById('detailsPanel').classList.remove('hidden');
+        });
+      }
+
       // Waiter/Waitress Application Form
       if (applicationForm == "Waiter/Waitress Application Form") {
-          viewButton.addEventListener('click', function() {
-              // Clear existing content
-              document.getElementById('applicationForm').textContent = "";
-              document.getElementById('fullName').textContent = "";
-              document.getElementById('email').textContent = "";
-              document.getElementById('dob').textContent = "";
-              document.getElementById('address').textContent = "";
-              document.getElementById('state').textContent = "";
-              document.getElementById('zip').textContent = "";
-              document.getElementById('education').textContent = "";
-              document.getElementById('employmenthistory').textContent = "";
-              document.getElementById('skillsandcertifications').textContent = "";
-              document.getElementById('experience').textContent = "N/A";
-              document.getElementById('multitask').textContent = "N/A";
-              document.getElementById('accuracy').textContent = "";
-              document.getElementById('quality').textContent = "N/A";
-              document.getElementById('whyworkhere').textContent = "";
-              document.getElementById('expectedsalary').textContent = "";
-              document.getElementById('bestcandidateskills').textContent = "";
-              document.getElementById('motivationsatwork').textContent = "";
-              document.getElementById('coverletter').textContent = "";
-      
-              // Populate elements with application form data
-              document.getElementById('applicationForm').textContent = `${applicationForm}`;
-              document.getElementById('fullName').textContent = `${fullName}`;
-              document.getElementById('email').textContent = `${email}`;
-              document.getElementById('dob').textContent = `${dob}`;
-              document.getElementById('address').textContent = `${address}`;
-              document.getElementById('state').textContent = `${state}`;
-              document.getElementById('zip').textContent = `${zip}`;
-              document.getElementById('coverletter').textContent = `${coverletter}`;
-              document.getElementById('employmenthistory').textContent = `${employmenthistory}`;
-              
-              document.getElementById('accuracy').textContent = `${accuracy}`;
-              document.getElementById('whyworkhere').textContent = `${whyworkhere}`;
-              document.getElementById('expectedsalary').textContent = `${expectedsalary}`;
-              document.getElementById('bestcandidateskills').textContent = `${bestcandidateskills}`;
-              document.getElementById('motivationsatwork').textContent = `${motivationsatwork}`;
-              
-              document.getElementById('detailsPanel').classList.remove('hidden');
-          });
+        viewButton.addEventListener('click', function () {
+          // Clear existing content
+          document.getElementById('applicationForm').textContent = "";
+          document.getElementById('fullName').textContent = "";
+          document.getElementById('email').textContent = "";
+          document.getElementById('dob').textContent = "";
+          document.getElementById('address').textContent = "";
+          document.getElementById('state').textContent = "";
+          document.getElementById('zip').textContent = "";
+          document.getElementById('education').textContent = "";
+          document.getElementById('employmenthistory').textContent = "";
+          document.getElementById('skillsandcertifications').textContent = "";
+          document.getElementById('experience').textContent = "N/A";
+          document.getElementById('multitask').textContent = "N/A";
+          document.getElementById('accuracy').textContent = "";
+          document.getElementById('quality').textContent = "N/A";
+          document.getElementById('whyworkhere').textContent = "";
+          document.getElementById('expectedsalary').textContent = "";
+          document.getElementById('bestcandidateskills').textContent = "";
+          document.getElementById('motivationsatwork').textContent = "";
+          document.getElementById('coverletter').textContent = "";
+
+          // Populate elements with application form data
+          document.getElementById('applicationForm').textContent = `${applicationForm}`;
+          document.getElementById('fullName').textContent = `${fullName}`;
+          document.getElementById('email').textContent = `${email}`;
+          document.getElementById('dob').textContent = `${dob}`;
+          document.getElementById('address').textContent = `${address}`;
+          document.getElementById('state').textContent = `${state}`;
+          document.getElementById('zip').textContent = `${zip}`;
+          document.getElementById('coverletter').textContent = `${coverletter}`;
+          document.getElementById('employmenthistory').textContent = `${employmenthistory}`;
+
+          document.getElementById('accuracy').textContent = `${accuracy}`;
+          document.getElementById('whyworkhere').textContent = `${whyworkhere}`;
+          document.getElementById('expectedsalary').textContent = `${expectedsalary}`;
+          document.getElementById('bestcandidateskills').textContent = `${bestcandidateskills}`;
+          document.getElementById('motivationsatwork').textContent = `${motivationsatwork}`;
+
+          document.getElementById('detailsPanel').classList.remove('hidden');
+        });
       }
-      
-        //Sous Chef
+
+      //Sous Chef
       if (applicationForm == "Sous Chef Application Form") {
-          viewButton.addEventListener('click', function() {
-              // Clear existing content
-              document.getElementById('applicationForm').textContent = "";
-              document.getElementById('fullName').textContent = "";
-              document.getElementById('email').textContent = "";
-              document.getElementById('dob').textContent = "";
-              document.getElementById('address').textContent = "";
-              document.getElementById('state').textContent = "";
-              document.getElementById('zip').textContent = "";
-              document.getElementById('education').textContent = "";
-              document.getElementById('employmenthistory').textContent = "";
-              document.getElementById('skillsandcertifications').textContent = "";
-              document.getElementById('experience').textContent = "N/A";
-              document.getElementById('multitask').textContent = "N/A";
-              document.getElementById('accuracy').textContent = "N/A";
-              document.getElementById('quality').textContent = "";
-              document.getElementById('whyworkhere').textContent = "";
-              document.getElementById('expectedsalary').textContent = "";
-              document.getElementById('bestcandidateskills').textContent = "";
-              document.getElementById('motivationsatwork').textContent = "";
-              document.getElementById('coverletter').textContent = "";
-      
-              // Populate elements with application form data
-              document.getElementById('applicationForm').textContent = `${applicationForm}`;
-              document.getElementById('fullName').textContent = `${fullName}`;
-              document.getElementById('email').textContent = `${email}`;
-              document.getElementById('dob').textContent = `${dob}`;
-              document.getElementById('address').textContent = `${address}`;
-              document.getElementById('state').textContent = `${state}`;
-              document.getElementById('zip').textContent = `${zip}`;
-              document.getElementById('education').textContent = `${education}`;
-              document.getElementById('coverletter').textContent = `${coverletter}`;
-              document.getElementById('employmenthistory').textContent = `${employmenthistory}`;
-              document.getElementById('skillsandcertifications').textContent = `${skillsandcertifications}`;
-              document.getElementById('quality').textContent = `${quality}`;
-              document.getElementById('whyworkhere').textContent = `${whyworkhere}`;
-              document.getElementById('expectedsalary').textContent = `${expectedsalary}`;
-              document.getElementById('bestcandidateskills').textContent = `${bestcandidateskills}`;
-              document.getElementById('motivationsatwork').textContent = `${motivationsatwork}`;
-              
-              document.getElementById('detailsPanel').classList.remove('hidden');
-          });
-      }
-      
+        viewButton.addEventListener('click', function () {
+          // Clear existing content
+          document.getElementById('applicationForm').textContent = "";
+          document.getElementById('fullName').textContent = "";
+          document.getElementById('email').textContent = "";
+          document.getElementById('dob').textContent = "";
+          document.getElementById('address').textContent = "";
+          document.getElementById('state').textContent = "";
+          document.getElementById('zip').textContent = "";
+          document.getElementById('education').textContent = "";
+          document.getElementById('employmenthistory').textContent = "";
+          document.getElementById('skillsandcertifications').textContent = "";
+          document.getElementById('experience').textContent = "N/A";
+          document.getElementById('multitask').textContent = "N/A";
+          document.getElementById('accuracy').textContent = "N/A";
+          document.getElementById('quality').textContent = "";
+          document.getElementById('whyworkhere').textContent = "";
+          document.getElementById('expectedsalary').textContent = "";
+          document.getElementById('bestcandidateskills').textContent = "";
+          document.getElementById('motivationsatwork').textContent = "";
+          document.getElementById('coverletter').textContent = "";
 
-        
+          // Populate elements with application form data
+          document.getElementById('applicationForm').textContent = `${applicationForm}`;
+          document.getElementById('fullName').textContent = `${fullName}`;
+          document.getElementById('email').textContent = `${email}`;
+          document.getElementById('dob').textContent = `${dob}`;
+          document.getElementById('address').textContent = `${address}`;
+          document.getElementById('state').textContent = `${state}`;
+          document.getElementById('zip').textContent = `${zip}`;
+          document.getElementById('education').textContent = `${education}`;
+          document.getElementById('coverletter').textContent = `${coverletter}`;
+          document.getElementById('employmenthistory').textContent = `${employmenthistory}`;
+          document.getElementById('skillsandcertifications').textContent = `${skillsandcertifications}`;
+          document.getElementById('quality').textContent = `${quality}`;
+          document.getElementById('whyworkhere').textContent = `${whyworkhere}`;
+          document.getElementById('expectedsalary').textContent = `${expectedsalary}`;
+          document.getElementById('bestcandidateskills').textContent = `${bestcandidateskills}`;
+          document.getElementById('motivationsatwork').textContent = `${motivationsatwork}`;
 
-
-        trow.appendChild(td1);
-        trow.appendChild(td2);
-        trow.appendChild(td3);
-        trow.appendChild(td4); 
-        
-        // Add td for control buttons
-
-
-        tbody.appendChild(trow);
-
+          document.getElementById('detailsPanel').classList.remove('hidden');
+        });
       }
 
-      //Add all items from fb db to the table
-      function AddAllItemsToTable(TheApplicant){
-        stdNo = 0;
-        tbody.innerHTML="";
-        TheApplicant.forEach(element => {
-          AddItemToTable(
-              element.fullName,
-              element.applicationForm,
-              element.email,
-              element.dob,
-              element.address,
-              element.state,
-              element.zip,
-              element.education,
-              element.employmenthistory,
-              element.skillsandcertifications,
-              element.experience,
-              element.multitask,
-              element.accuracy,
-              element.quality,
-              element.whyworkhere,
-              element.expectedsalary,
-              element.bestcandidateskills,
-              element.motivationsatwork,
-              element.coverletter
-          );
+
+
+
+
+      trow.appendChild(td1);
+      trow.appendChild(td2);
+      trow.appendChild(td3);
+      trow.appendChild(td4);
+
+      // Add td for control buttons
+
+
+      tbody.appendChild(trow);
+
+    }
+
+    //Add all items from fb db to the table
+    function AddAllItemsToTable(TheApplicant) {
+      stdNo = 0;
+      tbody.innerHTML = "";
+      TheApplicant.forEach(element => {
+        AddItemToTable(
+          element.fullName,
+          element.applicationForm,
+          element.email,
+          element.dob,
+          element.address,
+          element.state,
+          element.zip,
+          element.education,
+          element.employmenthistory,
+          element.skillsandcertifications,
+          element.experience,
+          element.multitask,
+          element.accuracy,
+          element.quality,
+          element.whyworkhere,
+          element.expectedsalary,
+          element.bestcandidateskills,
+          element.motivationsatwork,
+          element.coverletter
+        );
       });
     }
 
-      
-      
 
-      //get data from fb db to view applications
-      function GetAllDataOnce(){
-        const dbRef = ref(db);
 
-        get(child(dbRef, "fullName"))
-        .then((snapshot) =>{
+
+    //get data from fb db to view applications
+    function GetAllDataOnce() {
+      const dbRef = ref(db);
+
+      get(child(dbRef, "fullName"))
+        .then((snapshot) => {
           var applicants = [];
 
           snapshot.forEach(childSnapshot => {
@@ -536,28 +530,29 @@
           });
           AddAllItemsToTable(applicants);
         });
-      }
+    }
 
-      function GetAllDataRealtime(){
-        const dbRef = ref(db, "fullName");
+    function GetAllDataRealtime() {
+      const dbRef = ref(db, "fullName");
 
-        onValue(dbref, (snapshot) => {
-          var applicants = [];
+      onValue(dbref, (snapshot) => {
+        var applicants = [];
 
-          snapshot.forEach(childSnapshot => {
-            applicants.push(childSnapshot.val());
-          });
-          AddAllItemsToTable(applicants);
+        snapshot.forEach(childSnapshot => {
+          applicants.push(childSnapshot.val());
         });
-      }
-      
-      //once window loads, it get the data automatically
-      window.onload = GetAllDataOnce;    
-    </script>
+        AddAllItemsToTable(applicants);
+      });
+    }
 
-        
-      </section>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="main.js"></script>
-  </body>
+    //once window loads, it get the data automatically
+    window.onload = GetAllDataOnce;    
+  </script>
+
+
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>
