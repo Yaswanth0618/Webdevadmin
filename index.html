@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="x-icon" href="icon.png" />
+  <link rel="icon" type="x-icon" href="icon1.png" />
   <!--Title-->
   <title>Culinary Harbor Admin Login Page</title>
   <!--Style for Login-->
@@ -69,6 +69,8 @@
 
     
 </body>
+
+<script>localStorage.setItem("isLoggedIn", "false");</script>
 <script type="module">
   //Get Database
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
@@ -97,7 +99,7 @@
         const db = getDatabase(app);
 
 
-        localStorage.setItem("isLoggedIn", "false"); // Set login status to false
+         // Set login status to false
 
         const loginRef = ref(db, "login");
         //Check if the login values match with the actual credentials
