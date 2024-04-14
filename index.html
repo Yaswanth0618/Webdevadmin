@@ -23,6 +23,25 @@
 </body>
 
 <script>localStorage.setItem("isLoggedIn", "false");</script>
+<script>
+  // Prevent right-click and ctrl + u
+  window.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+  }, false);
+
+  // Prevent Ctrl+U
+  document.addEventListener("keydown", function(e) {
+    if (e.ctrlKey && e.key === "u") {
+      e.preventDefault();
+    }   
+  });
+
+  document.addEventListener("keydown", function(e) {
+    if ((e.ctrlKey && e.shiftKey && (e.key === "i" || e.key === "I")) || (e.ctrlKey && e.shiftKey && (e.key === "j" || e.key === "J"))) {
+        e.preventDefault();
+    }
+  });
+</script>
 <script type="module">
   //Get Database
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
