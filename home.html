@@ -98,7 +98,6 @@
 
     <div id="plainPanel" class="hidden">
       <p id="separator"></p>
-      <h3>Applicant Responses</h3>
       <br>
       <!--Create a format for viewing applications-->
     </div>
@@ -200,6 +199,7 @@
         }).then(
             message => alert("Decision Sent Successful!")
         );
+        document.getElementById('detailsPanel').classList.add('hidden');
         
 
           //remove application from db
@@ -242,6 +242,7 @@
         }).then(
             message => alert("Decision Sent Successful!")
         );
+        document.getElementById('detailsPanel').classList.add('hidden');
 
           //remove application from db
           remove(ref(db, 'fullName/' + fullName));
