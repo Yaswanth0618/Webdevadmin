@@ -315,7 +315,6 @@ header .apply_btn .btn:hover {
 }
 
 #detailsPanel strong:before {
-  content: ": ";
   font-weight: bold;
 }
 
