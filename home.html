@@ -244,6 +244,7 @@
         // GM
         if (applicationForm == "General Manager Application Form") {
           viewButton.addEventListener('click', function() {
+              var isHidden = detailsPanel.classList.contains('hidden');
               // Clear existing content
               document.getElementById('applicationForm').textContent = "";
               document.getElementById('fullName').textContent = "";
@@ -284,13 +285,19 @@
               document.getElementById('motivationsatwork').textContent = `${motivationsatwork}`;
               
               // Show details panel
-              document.getElementById('detailsPanel').classList.remove('hidden');
+              if (isHidden){
+                document.getElementById('detailsPanel').classList.remove('hidden');
+              } else {
+                document.getElementById('detailsPanel').classList.add('hidden');
+              }
+              
           });
         }
       
         //Cashier
         if (applicationForm == "Cashier Application Form") {
           viewButton.addEventListener('click', function() {
+              var isHidden = detailsPanel.classList.contains('hidden');
               // Clear existing content
               document.getElementById('applicationForm').textContent = "";
               document.getElementById('fullName').textContent = "";
@@ -328,13 +335,18 @@
               document.getElementById('bestcandidateskills').textContent = `${bestcandidateskills}`;
               document.getElementById('motivationsatwork').textContent = `${motivationsatwork}`;
               
-              document.getElementById('detailsPanel').classList.remove('hidden');
+              if (isHidden){
+                document.getElementById('detailsPanel').classList.remove('hidden');
+              } else {
+                document.getElementById('detailsPanel').classList.add('hidden');
+              }
           });
       }
       
       // Waiter/Waitress Application Form
       if (applicationForm == "Waiter/Waitress Application Form") {
           viewButton.addEventListener('click', function() {
+            var isHidden = detailsPanel.classList.contains('hidden');
               // Clear existing content
               document.getElementById('applicationForm').textContent = "";
               document.getElementById('fullName').textContent = "";
@@ -373,13 +385,18 @@
               document.getElementById('bestcandidateskills').textContent = `${bestcandidateskills}`;
               document.getElementById('motivationsatwork').textContent = `${motivationsatwork}`;
               
-              document.getElementById('detailsPanel').classList.remove('hidden');
+              if (isHidden){
+                document.getElementById('detailsPanel').classList.remove('hidden');
+              } else {
+                document.getElementById('detailsPanel').classList.add('hidden');
+              }
           });
       }
       
         //Sous Chef
       if (applicationForm == "Sous Chef Application Form") {
           viewButton.addEventListener('click', function() {
+            var isHidden = detailsPanel.classList.contains('hidden');
               // Clear existing content
               document.getElementById('applicationForm').textContent = "";
               document.getElementById('fullName').textContent = "";
@@ -419,7 +436,11 @@
               document.getElementById('bestcandidateskills').textContent = `${bestcandidateskills}`;
               document.getElementById('motivationsatwork').textContent = `${motivationsatwork}`;
               
-              document.getElementById('detailsPanel').classList.remove('hidden');
+              if (isHidden){
+                document.getElementById('detailsPanel').classList.remove('hidden');
+              } else {
+                document.getElementById('detailsPanel').classList.add('hidden');
+              }
           });
       }
       
