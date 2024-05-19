@@ -6,7 +6,7 @@
   <link rel="icon" type="x-icon" href="icon1.png" />
   <link rel="stylesheet" href="main.css" />
   <!--Title-->
-  <title>Culinary Harbor Admin Login Page</title>
+  <title>Login Page</title>
   
 </head>
 <body class="bodylogin">
@@ -23,8 +23,9 @@
 </body>
 
 <script>localStorage.setItem("isLoggedIn", "false");</script>
+
 <script>
-  // Prevent right-click and ctrl + u
+  // Prevent right-click
   window.addEventListener('contextmenu', function (e) {
     e.preventDefault();
   }, false);
@@ -36,12 +37,24 @@
     }   
   });
 
+  // Prevent Ctrl+Shift+I and Ctrl+Shift+J
   document.addEventListener("keydown", function(e) {
     if ((e.ctrlKey && e.shiftKey && (e.key === "i" || e.key === "I")) || (e.ctrlKey && e.shiftKey && (e.key === "j" || e.key === "J"))) {
-        e.preventDefault();
+      e.preventDefault();
+    }
+  });
+
+  // Prevent F12
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "F12") {
+      e.preventDefault();
     }
   });
 </script>
+
+
+
+
 <script type="module">
   //Get Database
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
@@ -78,7 +91,10 @@
             let userFound = false;
             snapshot.forEach((childSnapshot) => {
                 const userData = childSnapshot.val();
-                if (userData && userData === password) {
+                //console.log(userData.substring(0,15));
+                //console.log(userData.substring(15,26));
+        
+                if (username == userData.substring(15,26) && password == userData.substring(0,15)) {
                     userFound = true;
                     alert("Login successful");
                     // Set login status to true
