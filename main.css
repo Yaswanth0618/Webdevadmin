@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Raleway:wght@200;300;400;600;700&display=swap");
 
+
 .bodylogin {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color:#F7ECE1;
   margin: 0;
   padding: 0;
   display: flex;
@@ -10,7 +11,6 @@
   align-items: center;
   height: 100vh;
 }
-
 .login-info {
   background-color: #fff;
   padding: 20px;
@@ -23,7 +23,7 @@
 
 .containerxy {
   align-self: center;
-  background-color: #fff;
+  background-color: #E5EBEA;
   padding: 20px; /* Decreased padding for a smaller container */
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -399,3 +399,4 @@ font-size: 16px;
 .bold-before-colon::before {
 font-weight: bold;
 }
+
