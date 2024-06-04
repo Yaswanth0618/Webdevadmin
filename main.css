@@ -3,30 +3,31 @@
 
 .bodylogin {
   font-family: Arial, sans-serif;
-  background-color:#F7ECE1;
+  background-color:#f7f8f7;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  
 }
 .login-info {
   background-color: #fff;
   padding: 20px;
   margin-left: 20px;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
   width: 300px;
   max-width: 100%;
 }
 
 .containerxy {
   align-self: center;
-  background-color: #E5EBEA;
+  background-color: #ffffff;
   padding: 20px; /* Decreased padding for a smaller container */
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
   width: 350px; /* Decreased width for a smaller container */
   max-width: 100%;
 }
