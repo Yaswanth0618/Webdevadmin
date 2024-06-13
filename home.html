@@ -29,6 +29,17 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     /> -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "FoJRUS4Q8qc3vyF5T",
+          });
+      })();
+    </script>
+
 
   </head>
 
@@ -152,6 +163,7 @@
         let td2 = document.createElement('td');
         let td3 = document.createElement('td');
         let td4 = document.createElement('td');
+        console.log(email);
 
         td1.innerHTML = ++stdNo;
         td2.innerHTML = fullName;
@@ -168,23 +180,13 @@
         acceptButton.classList.add('btn', 'btn-success', 'mr-1', 'accept-button', 'btn-sm');
         acceptButton.addEventListener('click', function() {
           document.getElementById('plainPanel').classList.remove('hidden');
-          Email.send({
-            SecureToken: "5fa14da7-fa75-4b98-b8f8-032d3a412fe9",
-            To: email,
-            From: 'culinaryharbor30@gmail.com',
-            Subject: "Culinary Harbor: Application Decision",
-            Body: `
-                <p>Dear Applicant,</p>
-                <p>I am delighted to inform you that your application for the role at Culinary Harbor has been accepted! Congratulations on this exciting opportunity to join our team.</p>
-                <p>Your qualifications, experience, and enthusiasm for the culinary arts truly stood out among the many applicants we received. We believe that your skills and passion will greatly contribute to our team and help us continue to deliver exceptional dining experiences to our patrons.</p>
-                <p>As we move forward, we will provide you with all the necessary information regarding your start date, orientation, and any other details you may need to know before joining our team. We are confident that you will quickly become an integral part of the Culinary Harbor family.</p>
-                <p>Once again, congratulations on your acceptance, and welcome aboard! We are thrilled to have you join us and look forward to working together to create memorable culinary experiences.</p>
-                <p>Best regards,</p>
-                <p>John Smith<br>Admin<br>Culinary Harbor</p>
-            `
-        }).then(
-            message => alert("Decision Sent Successful!")
-        );
+          console.log(email)
+
+          emailjs.send("service_f6xywlm","template_1d9qird", {emailsend : email}).then(alert("Email Sent!!!"))
+          
+
+          
+         
         document.getElementById('detailsPanel').classList.add('hidden');
         
 
@@ -211,23 +213,7 @@
         rejectButton.classList.add('btn', 'btn-danger', 'reject-button', 'btn-sm');
         rejectButton.addEventListener('click', function() {
           document.getElementById('plainPanel').classList.remove('hidden');
-          Email.send({
-            SecureToken: "5fa14da7-fa75-4b98-b8f8-032d3a412fe9",
-            To: email,
-            From: 'culinaryharbor30@gmail.com',
-            Subject: "Culinary Harbor: Application Decision",
-            Body: `
-                <p>Dear Applicant,</p>
-                <p>I hope this message finds you well. I wanted to reach out to provide an update regarding your recent application for the role at Culinary Harbor.</p>
-                <p>After careful consideration and review of all applications received, we regret to inform you that we have decided not to move forward with your application at this time.</p>
-                <p>Please know that this decision was not made lightly, and it does not reflect negatively on your qualifications or experience. We received a large number of applications, and while we were impressed with your credentials, we ultimately had to make difficult choices based on our current needs and requirements.</p>
-                <p>We wish you all the best in your job search and in your future endeavors. Thank you once again for your interest in Culinary Harbor.</p>
-                <p>Best regards,</p>
-                <p>John Smith<br>Admin<br>Culinary Harbor</p>
-            `
-        }).then(
-            message => alert("Decision Sent Successful!")
-        );
+          emailjs.send("service_f6xywlm","template_w3xhblh", {emailsend : email}).then(alert("Email Sent!!!"))
         document.getElementById('detailsPanel').classList.add('hidden');
 
           //remove application from db
