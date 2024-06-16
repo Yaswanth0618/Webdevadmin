@@ -21,8 +21,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 
     <link rel="stylesheet" href="main.css" />
+
+    
+
 
     <!-- Swiper CSS
     <link
@@ -169,16 +174,19 @@
         td2.innerHTML = fullName;
         td3.innerHTML = applicationForm;
 
+
         //Create a view button
         let viewButton = document.createElement('button');
         viewButton.textContent = 'View';
         viewButton.classList.add('btn', 'btn-primary', 'mr-1', 'view-button');
+        
 
         //Create an accept button
         let acceptButton = document.createElement('button');
         acceptButton.textContent = 'Accept';
         acceptButton.classList.add('btn', 'btn-success', 'mr-1', 'accept-button', 'btn-sm');
         acceptButton.addEventListener('click', function() {
+
           document.getElementById('plainPanel').classList.remove('hidden');
           console.log(email)
 
@@ -234,10 +242,30 @@
         td4.appendChild(acceptButton);
         td4.appendChild(rejectButton);
 
+        function scrollToBottom() {
+          setTimeout(() => {
+            var offset = document.body.scrollHeight - window.innerHeight - 250; 
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+          }, 100); 
+        }
+
+
         
         // GM
         if (applicationForm == "General Manager Application Form") {
           viewButton.addEventListener('click', function() {
+            var highlightedRows = document.querySelectorAll('.highlighted-row');
+            highlightedRows.forEach(function(row) {
+              row.classList.remove('highlighted-row');
+            });
+
+            // Find the table row to highlight
+            var row = event.target.closest('tr');
+            if (row) 
+              // Add the highlighted class to the clicked row
+              row.classList.add('highlighted-row');
+            
+            scrollToBottom();
               var isHidden = detailsPanel.classList.contains('hidden');
               // Clear existing content
               document.getElementById('applicationForm').textContent = "";
@@ -281,8 +309,10 @@
               // Show details panel
               if (isHidden){
                 document.getElementById('detailsPanel').classList.remove('hidden');
+                
               } else {
                 document.getElementById('detailsPanel').classList.add('hidden');
+                row.classList.remove('highlighted-row');
               }
               
           });
@@ -290,7 +320,19 @@
       
         //Cashier
         if (applicationForm == "Cashier Application Form") {
+          
           viewButton.addEventListener('click', function() {
+            var highlightedRows = document.querySelectorAll('.highlighted-row');
+            highlightedRows.forEach(function(row) {
+              row.classList.remove('highlighted-row');
+            });
+
+            // Find the table row to highlight
+            var row = event.target.closest('tr');
+            if (row) 
+              // Add the highlighted class to the clicked row
+              row.classList.add('highlighted-row');
+            scrollToBottom();
               var isHidden = detailsPanel.classList.contains('hidden');
               // Clear existing content
               document.getElementById('applicationForm').textContent = "";
@@ -333,13 +375,26 @@
                 document.getElementById('detailsPanel').classList.remove('hidden');
               } else {
                 document.getElementById('detailsPanel').classList.add('hidden');
+                row.classList.remove('highlighted-row');
               }
           });
       }
       
       // Waiter/Waitress Application Form
       if (applicationForm == "Waiter/Waitress Application Form") {
+
           viewButton.addEventListener('click', function() {
+            var highlightedRows = document.querySelectorAll('.highlighted-row');
+            highlightedRows.forEach(function(row) {
+              row.classList.remove('highlighted-row');
+            });
+
+            // Find the table row to highlight
+            var row = event.target.closest('tr');
+            if (row) 
+              // Add the highlighted class to the clicked row
+              row.classList.add('highlighted-row');
+            scrollToBottom();
             var isHidden = detailsPanel.classList.contains('hidden');
               // Clear existing content
               document.getElementById('applicationForm').textContent = "";
@@ -383,6 +438,7 @@
                 document.getElementById('detailsPanel').classList.remove('hidden');
               } else {
                 document.getElementById('detailsPanel').classList.add('hidden');
+                row.classList.remove('highlighted-row');
               }
           });
       }
@@ -390,6 +446,17 @@
         //Sous Chef
       if (applicationForm == "Sous Chef Application Form") {
           viewButton.addEventListener('click', function() {
+            var highlightedRows = document.querySelectorAll('.highlighted-row');
+            highlightedRows.forEach(function(row) {
+              row.classList.remove('highlighted-row');
+            });
+
+            // Find the table row to highlight
+            var row = event.target.closest('tr');
+            if (row) 
+              // Add the highlighted class to the clicked row
+              row.classList.add('highlighted-row');
+            scrollToBottom();
             var isHidden = detailsPanel.classList.contains('hidden');
               // Clear existing content
               document.getElementById('applicationForm').textContent = "";
@@ -434,6 +501,7 @@
                 document.getElementById('detailsPanel').classList.remove('hidden');
               } else {
                 document.getElementById('detailsPanel').classList.add('hidden');
+                row.classList.remove('highlighted-row');
               }
           });
       }

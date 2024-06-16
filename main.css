@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Raleway:wght@200;300;400;600;700&display=swap");
 
 
-.bodylogin {
-  font-family: Arial, sans-serif;
-  background-color:#f7f8f7;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  
-}
+
+
+
+
+
+
+
+
+
+
+
 .login-info {
   background-color: #fff;
   padding: 20px;
@@ -21,50 +21,6 @@
   width: 300px;
   max-width: 100%;
 }
-
-.containerxy {
-  align-self: center;
-  background-color: #ffffff;
-  padding: 20px; /* Decreased padding for a smaller container */
-  border-radius: 5px;
-  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
-  width: 350px; /* Decreased width for a smaller container */
-  max-width: 100%;
-}
-
-.containerxy h2 {
-  text-align: center;
-  margin-bottom: 15px; /* Decreased margin bottom */
-}
-
-.containerxy form input {
-  align-self: center;
-  width: calc(100% - 22px); 
-  padding: 10px; /* Decreased padding for smaller input fields */
-  margin-bottom: 15px; /* Decreased margin bottom */
-  margin-left: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  font-size: 16px; /* Decreased font size */
-}
-
-.containerxy form button {
-  align-self: center;
-  margin-left: 10px;
-  width: 92%;
-  padding: 12px; /* Decreased padding for smaller button */
-  background-color: red;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 16px; /* Decreased font size */
-}
-
-.containerxy form .submit:hover {
-  background-color: red;
-}
-
 
 * {
   font-family: "Nunito", sans-serif;
@@ -289,58 +245,66 @@ header .apply_btn .btn:hover {
 
 /* main.css */
 #detailsPanel {
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
   padding: 20px;
   margin-top: 20px;
+  font-family: 'Arial Narrow', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #detailsPanel h3 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 24px; /* Increase font size */
+  font-weight: bold; /* Make text bold */
+  color: #333;
 }
 
 #detailsPanel p {
-  margin-bottom: 5px;
-  font-size: 16px; /* Increase font size */
+  font-family: 'Arial Narrow', sans-serif;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #666;
 }
 
 #detailsPanel #separator {
   margin-top: 10px;
-  margin-bottom: 10px;
-  color: #ccc;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  font-size: 0; /* Hide text */
 }
 
 #detailsPanel .response-section {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-#detailsPanel strong:before {
-  font-weight: bold;
+#detailsPanel strong {
+  font-size: 18px; /* Increase font size */
+  font-weight: bold; /* Make text bold */
+  color: #333;
 }
 
-#detailsPanel button {
-  background-color: #dc3545;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  font-size: 16px;
-  cursor: pointer;
+#detailsPanel span {
+  color: #555;
+  font-size: 18px;
+  font-weight: normal;
 }
 
-#detailsPanel button:hover {
-  background-color: #c82333;
-}
+
 
 .accept-button {
   margin-top: 10px;
   color: white;
   background-color: green;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .accept-button:hover{
   color: white;
   background-color: green;
+  font-weight: bold;
 }
 
 .view-button {
@@ -348,30 +312,34 @@ header .apply_btn .btn:hover {
   color: white;
   background-color: blue;
   padding: 5px 10px; 
-  font-size: 12px; 
+  font-size: 15px; 
   line-height: 1;
+  font-weight: bold;
 }
 
 .view-button:hover{
   color: white;
   background-color: blue;
+  font-weight: bold;
 }
 
 .reject-button {
   margin-top: 10px;
   color: white;
   background-color: red;
+  font-weight: bold;
 }
 
 .reject-button:hover{
   color: white;
   background-color: red;
+  font-weight: bold;
 }
 
 .accept-button,
 .reject-button {
   padding: 5px 10px;
-  font-size: 12px; 
+  font-size: 15px; 
   line-height: 1; 
 }
 
@@ -393,11 +361,21 @@ header .apply_btn .btn:hover {
   background-color: red;
 }
 
+.table th {
+  background-color: rgb(212, 209, 209);
+  font-size: 18px;
+  
+}
+
 .table td:not(:last-child) {
 font-size: 16px; 
+
 }
 
 .bold-before-colon::before {
 font-weight: bold;
 }
 
+.highlighted-row {
+  background-color: #ffffcc; /* Example highlight color */
+}
