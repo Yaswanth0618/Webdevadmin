@@ -80,12 +80,14 @@
           <th>Applicant Number</th>
           <th>Full Name</th>
           <th>Application Form</th>
-          <th>Control Center</th>
+          <th>Control</th>
         </thead>
         <tbody id = "tbody1"></tbody>
       </table>
     </div>
-    
+
+    <hr id="redSeparator">
+
     <div id="detailsPanel" class="hidden">
       <p id="separator"></p>
       <h3>Applicant Responses</h3>
@@ -244,7 +246,7 @@
 
         function scrollToBottom() {
           setTimeout(() => {
-            var offset = document.body.scrollHeight - window.innerHeight - 250; 
+            var offset = document.body.scrollHeight - window.innerHeight - 450; 
             window.scrollTo({ top: offset, behavior: 'smooth' });
           }, 100); 
         }
