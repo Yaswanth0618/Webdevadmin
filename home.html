@@ -149,6 +149,7 @@
         databaseURL: "https://fbla-restaurant-db-default-rtdb.firebaseio.com",
         projectId: "fbla-restaurant-db",
         storageBucket: "fbla-restaurant-db.appspot.com",
+        
         messagingSenderId: "1032671063739",
         appId: "1:1032671063739:web:93e3567aade232b2db839e"
       };
@@ -169,7 +170,6 @@
         let td2 = document.createElement('td');
         let td3 = document.createElement('td');
         let td4 = document.createElement('td');
-        console.log(email);
 
         td1.innerHTML = ++stdNo;
         td2.innerHTML = fullName;
@@ -191,7 +191,7 @@
           document.getElementById('plainPanel').classList.remove('hidden');
           console.log(email)
 
-          emailjs.send("service_f6xywlm","template_1d9qird", {emailsend : email}).then(alert("Email Sent!!!"))
+          emailjs.send("service_f6xywlm","template_1d9qird", {emailsend : email}).then(alert("Decision Sent!!!"))
           
 
           
@@ -222,7 +222,7 @@
         rejectButton.classList.add('btn', 'btn-danger', 'reject-button', 'btn-sm');
         rejectButton.addEventListener('click', function() {
           document.getElementById('plainPanel').classList.remove('hidden');
-          emailjs.send("service_f6xywlm","template_w3xhblh", {emailsend : email}).then(alert("Email Sent!!!"))
+          emailjs.send("service_f6xywlm","template_w3xhblh", {emailsend : email}).then(alert("Decision Sent!!!"))
         document.getElementById('detailsPanel').classList.add('hidden');
 
           //remove application from db

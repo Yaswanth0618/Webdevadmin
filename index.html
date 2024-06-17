@@ -99,8 +99,7 @@
             let userFound = false;
             snapshot.forEach((childSnapshot) => {
                 const userData = childSnapshot.val();
-                //console.log(userData.substring(0,15));
-                //console.log(userData.substring(15,26));
+              
         
                 if (username == userData.substring(15,26) && password == userData.substring(0,15)) {
                     userFound = true;
