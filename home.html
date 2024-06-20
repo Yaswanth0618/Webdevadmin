@@ -45,6 +45,9 @@
       })();
     </script>
 
+    
+
+
 
   </head>
 
@@ -111,7 +114,7 @@
       <p><strong id="expectedSalaryLabel">Expected Salary:</strong> <span id="expectedsalary"></span></p>
       <p><strong id="bestCandidateSkillsLabel">Best Candidate Skills:</strong> <span id="bestcandidateskills"></span></p>
       <p><strong id="motivationsAtWorkLabel">Motivations At Work:</strong> <span id="motivationsatwork"></span></p>
-
+      <p><strong id="resumeLabel">Resume:</strong> <a id="resumeLink" href="#" target="_blank">View Resume</a></p>
     </div>
 
     <div id="plainPanel" class="hidden">
@@ -141,6 +144,7 @@
     <script type="module">
       //Get Database
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+      import { getStorage, ref as refsto, getDownloadURL, uploadBytes } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js";
       
   
       const firebaseConfig = {
@@ -158,6 +162,10 @@
       const app = initializeApp(firebaseConfig);
       import { getDatabase, ref, child, onValue, get, remove} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
       const db = getDatabase();
+      const storage = getStorage();
+
+
+    
       
       var stdNo = 0;
       var tbody = document.getElementById('tbody1');
@@ -288,6 +296,7 @@
               document.getElementById('bestcandidateskills').textContent = "";
               document.getElementById('motivationsatwork').textContent = "";
               document.getElementById('coverletter').textContent = "";
+
       
               // Populate elements with application form data
               document.getElementById('applicationForm').textContent = `${applicationForm}`;
@@ -306,6 +315,22 @@
               document.getElementById('expectedsalary').textContent = `${expectedsalary}`;
               document.getElementById('bestcandidateskills').textContent = `${bestcandidateskills}`;
               document.getElementById('motivationsatwork').textContent = `${motivationsatwork}`;
+
+
+              const storageRef = refsto(storage, `resumes/${fullName}/${fullName}.pdf`); // Adjust the file path as needed
+              getDownloadURL(storageRef)
+                .then((url) => {
+                  document.getElementById('resumeLink').href = url;
+                  document.getElementById('resumeLink').textContent = "Download Resume";
+                })
+                .catch((error) => {
+                  console.error("Error fetching resume URL:", error);
+                });
+
+
+
+            
+      
               
               // Show details panel
               if (isHidden){
@@ -372,6 +397,16 @@
               document.getElementById('expectedsalary').textContent = `${expectedsalary}`;
               document.getElementById('bestcandidateskills').textContent = `${bestcandidateskills}`;
               document.getElementById('motivationsatwork').textContent = `${motivationsatwork}`;
+
+              const storageRef = refsto(storage, `resumes/${fullName}/${fullName}.pdf`); // Adjust the file path as needed
+              getDownloadURL(storageRef)
+                .then((url) => {
+                  document.getElementById('resumeLink').href = url;
+                  document.getElementById('resumeLink').textContent = "Download Resume";
+                })
+                .catch((error) => {
+                  console.error("Error fetching resume URL:", error);
+                });
               
               if (isHidden){
                 document.getElementById('detailsPanel').classList.remove('hidden');
@@ -436,6 +471,20 @@
               document.getElementById('expectedsalary').textContent = `${expectedsalary}`;
               document.getElementById('bestcandidateskills').textContent = `${bestcandidateskills}`;
               document.getElementById('motivationsatwork').textContent = `${motivationsatwork}`;
+
+
+              const storageRef = refsto(storage, `resumes/${fullName}/${fullName}.pdf`); // Adjust the file path as needed
+              getDownloadURL(storageRef)
+                .then((url) => {
+                  document.getElementById('resumeLink').href = url;
+                  document.getElementById('resumeLink').textContent = "Download Resume";
+                })
+                .catch((error) => {
+                  console.error("Error fetching resume URL:", error);
+                });
+
+
+              
               
               if (isHidden){
                 document.getElementById('detailsPanel').classList.remove('hidden');
@@ -499,6 +548,16 @@
               document.getElementById('expectedsalary').textContent = `${expectedsalary}`;
               document.getElementById('bestcandidateskills').textContent = `${bestcandidateskills}`;
               document.getElementById('motivationsatwork').textContent = `${motivationsatwork}`;
+
+              const storageRef = refsto(storage, `resumes/${fullName}/${fullName}.pdf`); // Adjust the file path as needed
+              getDownloadURL(storageRef)
+                .then((url) => {
+                  document.getElementById('resumeLink').href = url;
+                  document.getElementById('resumeLink').textContent = "Download Resume";
+                })
+                .catch((error) => {
+                  console.error("Error fetching resume URL:", error);
+                });
               
               if (isHidden){
                 document.getElementById('detailsPanel').classList.remove('hidden');
