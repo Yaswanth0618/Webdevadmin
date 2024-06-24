@@ -567,6 +567,320 @@
               }
           });
       }
+
+
+      // SS
+      if (applicationForm == "Shift Supervisor Application Form") {
+        viewButton.addEventListener('click', function() {
+          var highlightedRows = document.querySelectorAll('.highlighted-row');
+          highlightedRows.forEach(function(row) {
+            row.classList.remove('highlighted-row');
+          });
+
+          // Find the table row to highlight
+          var row = event.target.closest('tr');
+          if (row) 
+            // Add the highlighted class to the clicked row
+            row.classList.add('highlighted-row');
+          
+          scrollToBottom();
+            var isHidden = detailsPanel.classList.contains('hidden');
+            // Clear existing content
+            document.getElementById('applicationForm').textContent = "";
+            document.getElementById('fullName').textContent = "";
+            document.getElementById('email').textContent = "";
+            document.getElementById('dob').textContent = "";
+            document.getElementById('address').textContent = "";
+            document.getElementById('state').textContent = "";
+            document.getElementById('zip').textContent = "";
+            document.getElementById('education').textContent = "";
+            document.getElementById('employmenthistory').textContent = "";
+            document.getElementById('skillsandcertifications').textContent = "";
+            document.getElementById('experience').textContent = "";
+            document.getElementById('multitask').textContent = "N/A";
+            document.getElementById('accuracy').textContent = "N/A";
+            document.getElementById('quality').textContent = "N/A";
+            document.getElementById('whyworkhere').textContent = "";
+            document.getElementById('expectedsalary').textContent = "";
+            document.getElementById('bestcandidateskills').textContent = "";
+            document.getElementById('motivationsatwork').textContent = "";
+            document.getElementById('coverletter').textContent = "";
+
+    
+            // Populate elements with application form data
+            document.getElementById('applicationForm').textContent = `${applicationForm}`;
+            document.getElementById('fullName').textContent = `${fullName}`;
+            document.getElementById('email').textContent = `${email}`;
+            document.getElementById('dob').textContent = `${dob}`;
+            document.getElementById('address').textContent = `${address}`;
+            document.getElementById('state').textContent = `${state}`;
+            document.getElementById('zip').textContent = `${zip}`;
+            document.getElementById('education').textContent = `${education}`;
+            document.getElementById('coverletter').textContent = `${coverletter}`;
+            document.getElementById('employmenthistory').textContent = `${employmenthistory}`;
+            document.getElementById('skillsandcertifications').textContent = `${skillsandcertifications}`;
+            document.getElementById('experience').textContent = `${experience}`;
+            document.getElementById('whyworkhere').textContent = `${whyworkhere}`;
+            document.getElementById('expectedsalary').textContent = `${expectedsalary}`;
+            document.getElementById('bestcandidateskills').textContent = `${bestcandidateskills}`;
+            document.getElementById('motivationsatwork').textContent = `${motivationsatwork}`;
+
+
+            const storageRef = refsto(storage, `resumes/${fullName}/${fullName}.pdf`); // Adjust the file path as needed
+            getDownloadURL(storageRef)
+              .then((url) => {
+                document.getElementById('resumeLink').href = url;
+                document.getElementById('resumeLink').textContent = "View Resume";
+              })
+              .catch((error) => {
+                console.error("Error fetching resume URL:", error);
+              });
+
+
+
+          
+    
+            
+            // Show details panel
+            if (isHidden){
+              document.getElementById('detailsPanel').classList.remove('hidden');
+              
+            } else {
+              document.getElementById('detailsPanel').classList.add('hidden');
+              row.classList.remove('highlighted-row');
+            }
+            
+        });
+      }
+
+
+
+      //Dish Cleaner
+      if (applicationForm == "Dish Cleaner Application Form") {
+          
+        viewButton.addEventListener('click', function() {
+          var highlightedRows = document.querySelectorAll('.highlighted-row');
+          highlightedRows.forEach(function(row) {
+            row.classList.remove('highlighted-row');
+          });
+
+          // Find the table row to highlight
+          var row = event.target.closest('tr');
+          if (row) 
+            // Add the highlighted class to the clicked row
+            row.classList.add('highlighted-row');
+          scrollToBottom();
+            var isHidden = detailsPanel.classList.contains('hidden');
+            // Clear existing content
+            document.getElementById('applicationForm').textContent = "";
+            document.getElementById('fullName').textContent = "";
+            document.getElementById('email').textContent = "";
+            document.getElementById('dob').textContent = "";
+            document.getElementById('address').textContent = "";
+            document.getElementById('state').textContent = "";
+            document.getElementById('zip').textContent = "";
+            document.getElementById('education').textContent = "";
+            document.getElementById('employmenthistory').textContent = "";
+            document.getElementById('skillsandcertifications').textContent = "";
+            document.getElementById('experience').textContent = "N/A";
+            document.getElementById('multitask').textContent = "";
+            document.getElementById('accuracy').textContent = "N/A";
+            document.getElementById('quality').textContent = "N/A";
+            document.getElementById('whyworkhere').textContent = "";
+            document.getElementById('expectedsalary').textContent = "";
+            document.getElementById('bestcandidateskills').textContent = "";
+            document.getElementById('motivationsatwork').textContent = "";
+            document.getElementById('coverletter').textContent = "";
+    
+            // Populate elements with application form data
+            document.getElementById('applicationForm').textContent = `${applicationForm}`;
+            document.getElementById('fullName').textContent = `${fullName}`;
+            document.getElementById('email').textContent = `${email}`;
+            document.getElementById('dob').textContent = `${dob}`;
+            document.getElementById('address').textContent = `${address}`;
+            document.getElementById('state').textContent = `${state}`;
+            document.getElementById('zip').textContent = `${zip}`;
+            document.getElementById('education').textContent = `${education}`;
+            document.getElementById('coverletter').textContent = `${coverletter}`;
+            document.getElementById('employmenthistory').textContent = `${employmenthistory}`;
+            document.getElementById('multitask').textContent = `${multitask}`;
+            document.getElementById('whyworkhere').textContent = `${whyworkhere}`;
+            document.getElementById('expectedsalary').textContent = `${expectedsalary}`;
+            document.getElementById('bestcandidateskills').textContent = `${bestcandidateskills}`;
+            document.getElementById('motivationsatwork').textContent = `${motivationsatwork}`;
+
+            const storageRef = refsto(storage, `resumes/${fullName}/${fullName}.pdf`); // Adjust the file path as needed
+            getDownloadURL(storageRef)
+              .then((url) => {
+                document.getElementById('resumeLink').href = url;
+                document.getElementById('resumeLink').textContent = "View Resume";
+              })
+              .catch((error) => {
+                console.error("Error fetching resume URL:", error);
+              });
+            
+            if (isHidden){
+              document.getElementById('detailsPanel').classList.remove('hidden');
+            } else {
+              document.getElementById('detailsPanel').classList.add('hidden');
+              row.classList.remove('highlighted-row');
+            }
+        });
+    }
+
+
+    //Maintenance Worker  Application Form
+    if (applicationForm == "Maintenance Worker Application Form") {
+
+      viewButton.addEventListener('click', function() {
+        var highlightedRows = document.querySelectorAll('.highlighted-row');
+        highlightedRows.forEach(function(row) {
+          row.classList.remove('highlighted-row');
+        });
+
+        // Find the table row to highlight
+        var row = event.target.closest('tr');
+        if (row) 
+          // Add the highlighted class to the clicked row
+          row.classList.add('highlighted-row');
+        scrollToBottom();
+        var isHidden = detailsPanel.classList.contains('hidden');
+          // Clear existing content
+          document.getElementById('applicationForm').textContent = "";
+          document.getElementById('fullName').textContent = "";
+          document.getElementById('email').textContent = "";
+          document.getElementById('dob').textContent = "";
+          document.getElementById('address').textContent = "";
+          document.getElementById('state').textContent = "";
+          document.getElementById('zip').textContent = "";
+          document.getElementById('education').textContent = "";
+          document.getElementById('employmenthistory').textContent = "";
+          document.getElementById('skillsandcertifications').textContent = "";
+          document.getElementById('experience').textContent = "N/A";
+          document.getElementById('multitask').textContent = "N/A";
+          document.getElementById('accuracy').textContent = "";
+          document.getElementById('quality').textContent = "N/A";
+          document.getElementById('whyworkhere').textContent = "";
+          document.getElementById('expectedsalary').textContent = "";
+          document.getElementById('bestcandidateskills').textContent = "";
+          document.getElementById('motivationsatwork').textContent = "";
+          document.getElementById('coverletter').textContent = "";
+  
+          // Populate elements with application form data
+          document.getElementById('applicationForm').textContent = `${applicationForm}`;
+          document.getElementById('fullName').textContent = `${fullName}`;
+          document.getElementById('email').textContent = `${email}`;
+          document.getElementById('dob').textContent = `${dob}`;
+          document.getElementById('address').textContent = `${address}`;
+          document.getElementById('state').textContent = `${state}`;
+          document.getElementById('zip').textContent = `${zip}`;
+          document.getElementById('education').textContent = `${education}`;
+          document.getElementById('coverletter').textContent = `${coverletter}`;
+          document.getElementById('employmenthistory').textContent = `${employmenthistory}`;
+          
+          document.getElementById('accuracy').textContent = `${accuracy}`;
+          document.getElementById('whyworkhere').textContent = `${whyworkhere}`;
+          document.getElementById('expectedsalary').textContent = `${expectedsalary}`;
+          document.getElementById('bestcandidateskills').textContent = `${bestcandidateskills}`;
+          document.getElementById('motivationsatwork').textContent = `${motivationsatwork}`;
+
+
+          const storageRef = refsto(storage, `resumes/${fullName}/${fullName}.pdf`); // Adjust the file path as needed
+          getDownloadURL(storageRef)
+            .then((url) => {
+              document.getElementById('resumeLink').href = url;
+              document.getElementById('resumeLink').textContent = "View Resume";
+            })
+            .catch((error) => {
+              console.error("Error fetching resume URL:", error);
+            });
+
+
+          
+          
+          if (isHidden){
+            document.getElementById('detailsPanel').classList.remove('hidden');
+          } else {
+            document.getElementById('detailsPanel').classList.add('hidden');
+            row.classList.remove('highlighted-row');
+          }
+      });
+  }
+
+
+
+    //Training Coordinator
+    if (applicationForm == "Training Coordinator Application Form") {
+      viewButton.addEventListener('click', function() {
+        var highlightedRows = document.querySelectorAll('.highlighted-row');
+        highlightedRows.forEach(function(row) {
+          row.classList.remove('highlighted-row');
+        });
+
+        // Find the table row to highlight
+        var row = event.target.closest('tr');
+        if (row) 
+          // Add the highlighted class to the clicked row
+          row.classList.add('highlighted-row');
+        scrollToBottom();
+        var isHidden = detailsPanel.classList.contains('hidden');
+          // Clear existing content
+          document.getElementById('applicationForm').textContent = "";
+          document.getElementById('fullName').textContent = "";
+          document.getElementById('email').textContent = "";
+          document.getElementById('dob').textContent = "";
+          document.getElementById('address').textContent = "";
+          document.getElementById('state').textContent = "";
+          document.getElementById('zip').textContent = "";
+          document.getElementById('education').textContent = "";
+          document.getElementById('employmenthistory').textContent = "";
+          document.getElementById('skillsandcertifications').textContent = "";
+          document.getElementById('experience').textContent = "N/A";
+          document.getElementById('multitask').textContent = "N/A";
+          document.getElementById('accuracy').textContent = "N/A";
+          document.getElementById('quality').textContent = "";
+          document.getElementById('whyworkhere').textContent = "";
+          document.getElementById('expectedsalary').textContent = "";
+          document.getElementById('bestcandidateskills').textContent = "";
+          document.getElementById('motivationsatwork').textContent = "";
+          document.getElementById('coverletter').textContent = "";
+  
+          // Populate elements with application form data
+          document.getElementById('applicationForm').textContent = `${applicationForm}`;
+          document.getElementById('fullName').textContent = `${fullName}`;
+          document.getElementById('email').textContent = `${email}`;
+          document.getElementById('dob').textContent = `${dob}`;
+          document.getElementById('address').textContent = `${address}`;
+          document.getElementById('state').textContent = `${state}`;
+          document.getElementById('zip').textContent = `${zip}`;
+          document.getElementById('education').textContent = `${education}`;
+          document.getElementById('coverletter').textContent = `${coverletter}`;
+          document.getElementById('employmenthistory').textContent = `${employmenthistory}`;
+          document.getElementById('skillsandcertifications').textContent = `${skillsandcertifications}`;
+          document.getElementById('quality').textContent = `${quality}`;
+          document.getElementById('whyworkhere').textContent = `${whyworkhere}`;
+          document.getElementById('expectedsalary').textContent = `${expectedsalary}`;
+          document.getElementById('bestcandidateskills').textContent = `${bestcandidateskills}`;
+          document.getElementById('motivationsatwork').textContent = `${motivationsatwork}`;
+
+          const storageRef = refsto(storage, `resumes/${fullName}/${fullName}.pdf`); // Adjust the file path as needed
+          getDownloadURL(storageRef)
+            .then((url) => {
+              document.getElementById('resumeLink').href = url;
+              document.getElementById('resumeLink').textContent = "View Resume";
+            })
+            .catch((error) => {
+              console.error("Error fetching resume URL:", error);
+            });
+          
+          if (isHidden){
+            document.getElementById('detailsPanel').classList.remove('hidden');
+          } else {
+            document.getElementById('detailsPanel').classList.add('hidden');
+            row.classList.remove('highlighted-row');
+          }
+      });
+  }
       
 
         
