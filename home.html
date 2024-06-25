@@ -54,7 +54,7 @@
 
   <body class="bodymain">
     <header>
-      <a href="#" class="logo">
+      <a href="home.html" class="logo">
         <img src="admin logo.png" width="50px" />
         <div class="log_text">Admin Portal</div>
       </a>
@@ -121,7 +121,15 @@
       <p id="separator"></p>
       <br>
       <!--Create a format for viewing applications-->
+      
     </div>
+
+    <div class="track-website-btn">
+      <<a href="track.html">
+        <button type="button">behavioral Analytics</button>
+    </a>
+    </div>
+    
 
     <script>
       // Check if the user is logged in
@@ -142,9 +150,25 @@
     
 
     <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+      import { getDatabase as tractgetDB, ref as tractref, set, update, increment, onValue as trackonvalue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
       //Get Database
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+      import { initializeApp as inimain } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
       import { getStorage, ref as refsto, getDownloadURL, uploadBytes } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js";
+
+      const firebaseConfig1 = {
+        apiKey: "AIzaSyA8KxkL46u0BsqFWc0T3lq6RCaGLs7wpLA",
+        authDomain: "ch-analytics-f7d03.firebaseapp.com",
+        databaseURL: "https://ch-analytics-f7d03-default-rtdb.firebaseio.com",
+        projectId: "ch-analytics-f7d03",
+        storageBucket: "ch-analytics-f7d03.appspot.com",
+        messagingSenderId: "462976003815",
+        appId: "1:462976003815:web:6eb5ed5952144dedcbfc42",
+        measurementId: "G-5JS69NW9GV"
+      };
+
+      const app1 = initializeApp(firebaseConfig1);
+      const db1 = tractgetDB(app1);
       
   
       const firebaseConfig = {
@@ -159,7 +183,7 @@
       };
 
 
-      const app = initializeApp(firebaseConfig);
+      const app = inimain(firebaseConfig);
       import { getDatabase, ref, child, onValue, get, remove} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
       const db = getDatabase();
       const storage = getStorage();
@@ -195,6 +219,10 @@
         acceptButton.textContent = 'Accept';
         acceptButton.classList.add('btn', 'btn-success', 'mr-1', 'accept-button', 'btn-sm');
         acceptButton.addEventListener('click', function() {
+          const analyticsRef = ref(db1, 'analytics');
+          update(analyticsRef, {
+            acceptedApplications: increment(1)
+        });
 
           document.getElementById('plainPanel').classList.remove('hidden');
           console.log(email)
@@ -229,6 +257,10 @@
         rejectButton.textContent = 'Reject';
         rejectButton.classList.add('btn', 'btn-danger', 'reject-button', 'btn-sm');
         rejectButton.addEventListener('click', function() {
+          const analyticsRef = ref(db1, 'analytics');
+          update(analyticsRef, {
+            rejectedApplications: increment(1)
+        });
           document.getElementById('plainPanel').classList.remove('hidden');
           emailjs.send("service_f6xywlm","template_w3xhblh", {emailsend : email}).then(alert("Decision Sent!!!"))
         document.getElementById('detailsPanel').classList.add('hidden');

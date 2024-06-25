@@ -394,3 +394,27 @@ font-weight: bold;
 .highlighted-row {
   background-color: #ffffcc; /* Example highlight color */
 }
+
+
+.track-website-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Adjust this as needed */
+  margin-bottom: 30px;
+}
+
+.track-website-btn button {
+  background-color: red;
+  color: white;
+  font-size: 1.5em;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.track-website-btn button:hover {
+  transform: scale(1.1);
+}
