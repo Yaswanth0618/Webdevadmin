@@ -99,12 +99,13 @@
             let userFound = false;
             snapshot.forEach((childSnapshot) => {
                 const userData = childSnapshot.val();
+              console.log(userData.substring(15,26));
+                    console.log(userData.substring(0,15));
 
               
               
                 if (username == userData.substring(15,26) && password == userData.substring(0,15)) {
-                    console.log(username);
-                    console.log(password);
+                    
                     userFound = true;
                     
                     // Set login status to true
